@@ -14,13 +14,30 @@ Estas instrucciones deben aplicarse al crear o modificar archivos del proyecto. 
 - No cargar recursos ajenos al proyecto: evitar imágenes, scripts, hojas de estilo, bibliotecas y fuentes remotas, incluidos CDNs. Utilizar recursos locales existentes. Si Tailwind aún no está disponible localmente, no añadir un CDN por conveniencia; informar de la necesidad de resolver su configuración local antes de depender de él.
 - Mantener el prototipo ligero y evitar dependencias innecesarias.
 
+## Ramas de funcionalidad
+
+- Antes de empezar a trabajar en una funcionalidad, comprobar la rama activa con `git branch --show-current` y verificar que corresponde a esa funcionalidad.
+- Aceptar como válidos tanto el nombre simple de la funcionalidad como el prefijo `feature/` (por ejemplo, para Home: `home` o `feature/home`). Comparar los nombres sin distinguir mayúsculas y minúsculas.
+- Si la rama activa no coincide, no empezar el trabajo de la funcionalidad; informar de ello y solicitar el cambio a la rama correspondiente. No cambiar de rama silenciosamente.
+
+## Flujo de trabajo SDD
+
+- Trabajar mediante SDD (*Spec-Driven Development*): antes de implementar una funcionalidad, crear y revisar los documentos que describen su especificación y los pasos de implementación.
+- Mantener los documentos de cada funcionalidad separados y agrupados con el código correspondiente dentro de una carpeta propia de esa funcionalidad. No dispersar sus artefactos por carpetas de otras funcionalidades.
+- Usar nombres claros para los artefactos (por ejemplo, `spec.md`, `plan.md` y `tasks.md`) y actualizar la especificación si cambia el alcance acordado.
+
+## Fuentes locales
+
+- Cuando una tarea requiera escribir código que use las tipografías de `FONTS/`, descomprimir sus archivos directamente, sin pedir autorización adicional.
+- Mantener los archivos extraídos dentro de la estructura del proyecto y respetar las licencias incluidas o aplicables. No descomprimir las fuentes si la tarea no las necesita.
+
 ## Presentación de producto final
 
 - Aunque el entregable sea un prototipo, la página y sus contenidos visibles deben presentarse como una tienda final, cuidada y coherente con la marca.
 - No incluir avisos, etiquetas ni textos visibles que digan que el sitio es un prototipo, que los datos son de prueba o que no se recopilan/procesan datos.
 - No añadir mensajes de éxito, confirmaciones o comportamientos que impliquen un procesamiento inexistente. Mantener los controles en HTML y CSS sin JavaScript; navegación entre páginas estáticas puede hacerse con enlaces.
 - No mostrar en la interfaz notas técnicas ni explicaciones sobre limitaciones de implementación. La ausencia de procesamiento se refleja en el alcance estático de la web, no mediante disclaimers.
-- No inventar afirmaciones reales sobre la empresa, certificaciones, políticas, contacto o condiciones legales. Si faltan datos de marca o legales imprescindibles, solicitar esos datos antes de presentarlos como hechos; no sustituirlos por avisos de que el sitio es un prototipo.
+- No inventar afirmaciones reales sobre la empresa, certificaciones, políticas, contacto o condiciones legales. Si faltan datos imprescindibles, solicitar definición antes de presentarlos como hechos. Para esta marca ficticia, el usuario autorizó expresamente contenido de demostración de identidad/contacto y textos legales que aclaran el carácter ficticio; esa autorización no equivale a una certificación, política comercial o garantía real. No sustituir información legal real por avisos de que el sitio es un prototipo.
 
 ## Accesibilidad como principio de marca
 
