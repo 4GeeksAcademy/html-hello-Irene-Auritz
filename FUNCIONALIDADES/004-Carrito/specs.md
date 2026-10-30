@@ -1,7 +1,7 @@
 # Especificación — Carrito
 
 - **Funcionalidad:** `004-Carrito`
-- **Estado:** implementación realizada con tarjetas enlazadas a Producto; pendiente de verificación visual renderizada y cierre de validación
+- **Estado:** Tailwind CSS v4 integrado con tarjetas enlazadas a Producto; pendiente de verificación visual renderizada y cierre de validación
 - **Rama comprobada:** `Carrito`
 - **Página prevista:** `Carrito.html`
 - **Idioma:** español
@@ -28,7 +28,7 @@ La marca y los datos aquí propuestos son ficticios. El usuario autorizó expres
 
 - Lógica dinámica del carrito, persistencia, cambios de cantidad, eliminación o recálculo de importes.
 - Procesamiento de pedidos, pagos o datos personales.
-- JavaScript, endpoints, backend, dependencias/frameworks JavaScript, CDNs o recursos remotos.
+- JavaScript, endpoints, backend y dependencias/frameworks JavaScript. Se permite únicamente el CDN oficial de Tailwind CSS v4 de acuerdo con `agent/AGENTS.md`; otros CDNs y recursos remotos quedan fuera de alcance.
 - Crear o modificar la página de Checkout, Catálogo o Producto.
 - Afirmaciones comerciales reales sobre disponibilidad, entrega, devoluciones, garantías o servicios.
 
@@ -69,8 +69,8 @@ No mostrar mensajes de compra completada, reserva, envío confirmado ni estados 
 ## 5. Dirección visual, recursos y tipografía
 
 - Seguir la dirección editorial urbana y paleta descritas en `agent/DESIGN.md` y mantener continuidad con Home.
-- Usar HTML semántico y CSS local. El placeholder actual menciona Tailwind por CDN; esa referencia no se debe conservar: `agent/AGENTS.md` prohíbe recursos remotos y prevalece sobre la mención anterior a CDN en `contexto_del_proyecto.md`.
-- Puede reutilizarse `FUNCIONALIDADES/001-Home/styles.css` con una ruta relativa adecuada y las clases globales existentes. No copiar código de CDN ni crear una infraestructura de estilos que contradiga el sitio estático.
+- Usar HTML semántico, CSS local y Tailwind CSS v4, permitido por `agent/AGENTS.md`. El CDN de Tailwind v4 es la única dependencia remota autorizada; no añadir otros recursos externos.
+- Reutilizar `FUNCIONALIDADES/001-Home/styles.css` con una ruta relativa adecuada y las clases globales existentes. Mantener reglas CSS locales para la composición específica y responsive de Carrito.
 - Mantener la pila tipográfica y los archivos locales de Home (Old London, VHS Gothic y sans serif de sistema) solo donde sea coherente; reservar las fuentes ornamentales para títulos breves, nunca para importes o lectura prolongada.
 - Usar exclusivamente imágenes disponibles en `IMG/`; seguir `IMG/textos-alternativos.md` y ajustar las alternativas al contexto de miniatura de producto.
 - No añadir iconos o logotipos de marcas comerciales de pago, certificaciones, sellos ni medios de pago afirmados como aceptados.
@@ -103,7 +103,7 @@ El proyecto prohíbe JavaScript y no dispone de backend. Por tanto:
 - [x] Los datos inventados están documentados aquí como contenido ficticio autorizado y no se presentan como hechos comprobados fuera de la maqueta.
 - [x] Checkout y Catálogo son enlaces de navegación, no acciones de compra simuladas.
 - [x] No hay controles de cambio de cantidad, eliminación o compra que aparenten procesar algo sin lógica real. El formulario compartido del footer permanece deshabilitado.
-- [x] No hay JavaScript, CDNs ni dependencias remotas para estilos, fuentes o imágenes. El footer conserva enlaces externos a redes sociales como destinos de navegación.
+- [x] No hay JavaScript ni dependencias JavaScript. Se utiliza exclusivamente el CDN oficial de Tailwind CSS v4, autorizado por `agent/AGENTS.md`; fuentes e imágenes continúan siendo locales. El footer conserva enlaces externos a redes sociales como destinos de navegación.
 - [x] Las imágenes y textos alternativos son locales y contextuales; los enlaces tienen foco visible definido en CSS. No se realizó una prueba manual con teclado en navegador.
 - [ ] La página es legible y usable en móvil, tableta y escritorio, sin desbordamiento horizontal. Los breakpoints y reglas responsive están definidos y revisados en CSS; queda pendiente confirmar el resultado renderizado en navegador.
 - [ ] Se revisa contraste y `git diff --check`; las verificaciones de estructura/rutas y diagnósticos del editor no detectaron errores. El contraste fue revisado por pares de color en CSS, pero no se ejecutó una herramienta de medición; `git diff --check` y la inspección renderizada quedan pendientes.
@@ -124,3 +124,4 @@ El proyecto prohíbe JavaScript y no dispone de backend. Por tanto:
 - Se revisaron las reglas mobile-first y breakpoints (42rem y 72rem), así como estilos `:focus-visible`. No hay navegador/renderizador disponible en esta sesión, por lo que no se declara una inspección visual, prueba de scroll horizontal ni prueba de navegación física por teclado.
 - La validación final de `git diff --check` no se ejecutó; no se marca como superada.
 - En la actualización de tarjetas se comprobaron rama y estado de Git antes de editar; los nuevos enlaces mantienen como destino la página local de Producto. Queda pendiente la correspondencia con anclas específicas hasta que Producto tenga tarjetas reales.
+- Se añadió Tailwind CSS v4 por el CDN oficial autorizado en `agent/AGENTS.md`; las tarjetas usan `rounded-xl` y `shadow-sm`, y los layouts responsive permanecen en `styles.css`.

@@ -1,7 +1,7 @@
 # Tareas de implementación — Carrito
 
 - **Funcionalidad:** `004-Carrito`
-- **Estado:** tarjetas de producto implementadas; validación final pendiente
+- **Estado:** Tailwind CSS v4 integrado en Carrito; validación visual final pendiente
 - **Especificación:** [`specs.md`](./specs.md)
 - **Plan:** [`plan.md`](./plan.md)
 - **Rama comprobada al crear esta lista:** `Carrito`
@@ -29,7 +29,7 @@
 
 ## C. Estilos y adaptación
 
-- [x] **C1. Enlazar los estilos compartidos y definir los específicos necesarios.** Cargar localmente la hoja de Home con la ruta correcta; añadir solo las reglas propias de Carrito que no alteren ni requieran modificar páginas vecinas. No añadir CDN ni recursos remotos. Se creó `styles.css` dentro de la funcionalidad y se enlazó localmente junto al CSS compartido.
+- [x] **C1. Enlazar los estilos compartidos y definir los específicos necesarios.** Cargar localmente la hoja de Home con la ruta correcta; añadir solo las reglas propias de Carrito que no alteren ni requieran modificar páginas vecinas. Se creó `styles.css` dentro de la funcionalidad y se enlazó localmente junto al CSS compartido. Por la instrucción actualizada de `agent/AGENTS.md`, se integra Tailwind CSS v4 mediante el CDN oficial autorizado.
 - [x] **C2. Componer el resumen y las líneas para distintos tamaños.** Ajustar el orden y agrupación de producto, variante, cantidad e importes para móvil, tableta y escritorio; conservar legibilidad y evitar scroll horizontal sin forzar una rejilla de catálogo. La hoja específica apila las líneas en móvil y presenta las columnas de producto/precios y el resumen lateral en pantallas amplias.
 - [x] **C3. Revisar coherencia visual y accesibilidad.** Aplicar paleta, tipografía y espaciado comunes; comprobar contraste, foco visible, orden de lectura, enlaces por teclado y legibilidad de importes. Mantener fuentes ornamentales fuera de lectura y precios. La página reutiliza los tokens globales, reserva Old London para el título, usa VHS Gothic solo en encabezados breves y define foco destacado; la medición de contraste queda pendiente de validación final.
 
@@ -43,3 +43,4 @@
 ## E. Referencias a Producto
 
 - [x] **E1. Convertir las prendas en tarjetas enlazadas.** Cada artículo se presenta como tarjeta visual con imagen y nombre enlazados a `../003-Vista-producto/Producto.html`, enlace explícito «Ver producto» e identificador semántico estable (`data-product-ref`). `Producto.html` sigue siendo un placeholder sin tarjetas ni IDs de producto; por ello no se inventan fragmentos destino inexistentes. Cuando se construyan esas tarjetas, deberán usar las mismas claves (`chaqueta-piel-bordada`, `camiseta-grafica-manga-larga`, `vaqueros-grafico-alas`) y Carrito podrá enlazar a sus anclas concretas.
+- [x] **E2. Integrar utilidades Tailwind CSS en las tarjetas.** Se añade el CDN oficial de Tailwind CSS v4 y se utilizan `rounded-xl` y `shadow-sm` en cada tarjeta. La hoja local mantiene los estilos responsivos y específicos de Carrito.

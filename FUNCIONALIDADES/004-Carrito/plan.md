@@ -1,15 +1,19 @@
 # Plan de implementación — Carrito
 
 - **Funcionalidad:** `004-Carrito`
-- **Estado:** plan ejecutado en parte; tarjetas de producto enlazadas, verificación visual y cierre pendientes
+- **Estado:** plan ejecutado en parte; Tailwind CSS v4 y tarjetas de producto integrados, verificación visual y cierre pendientes
 - **Especificación:** [`specs.md`](./specs.md)
 - **Rama comprobada:** `Carrito`
 
 ## 1. Objetivo del plan
 
-Desarrollar la página estática de Carrito descrita en `specs.md`: una vista completa, visualmente coherente con Home, accesible y adaptable, que presente tres artículos ficticios y un resumen de importes coherente, sin simular edición del carrito, cálculos en vivo ni procesamiento de compra. La implementación base está realizada; la inspección visual renderizada y el cierre de validaciones permanecen pendientes. Posteriormente, las prendas se actualizaron a tarjetas enlazadas a la página Producto. Producto todavía es un placeholder sin tarjetas ni fragmentos destino, por lo que se usan claves `data-product-ref` para correspondencia futura y no se enlazan anclas inexistentes.
+Desarrollar la página estática de Carrito descrita en `specs.md`: una vista completa, visualmente coherente con Home, accesible y adaptable, que presente tres artículos ficticios y un resumen de importes coherente, sin simular edición del carrito, cálculos en vivo ni procesamiento de compra. Las prendas se presentan como tarjetas enlazadas a Producto. Producto todavía es un placeholder sin tarjetas ni fragmentos destino, por lo que se usan claves `data-product-ref` para correspondencia futura y no se enlazan anclas inexistentes. Tailwind CSS v4 se añadió después de actualizar `agent/AGENTS.md` para permitir expresamente su CDN oficial; los estilos específicos se migran a utilidades Tailwind, conservando el CSS compartido de marca. La inspección visual renderizada permanece pendiente.
 
-Este documento organiza el trabajo, sus dependencias y su estado. La implementación se encuentra en `Carrito.html` y `styles.css`; este plan no es el código ejecutable.
+Este documento organiza el trabajo, sus dependencias y su estado. La implementación se encuentra en `Carrito.html`; este plan no es el código ejecutable.
+
+### Migración a Tailwind sin rediseño
+
+Se trasladan todos los estilos específicos de Carrito a utilidades Tailwind CSS v4 y se elimina su hoja `styles.css`. Se conservan los valores originales de colores, espaciado, tamaños, proporciones, interacciones y puntos de corte de 42rem y 72rem. Se mantiene la hoja compartida de Home sin modificar para fuentes, tokens, navegación y pie. «Tu selección» utiliza Old London; «Prendas seleccionadas» y «Resumen del pedido», VHS Gothic. La autorización del CDN en `agent/AGENTS.md` prevalece sobre las restricciones históricas de este plan. La comparación visual en navegador queda pendiente si no hay navegador disponible.
 
 ## 2. Principios de implementación
 

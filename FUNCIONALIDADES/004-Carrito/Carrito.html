@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#0c120c">
   <title>Tu selección — NOIR ÉDITION</title>
   <link rel="preload" href="../../FONTS/OldLondon.ttf" as="font" type="font/ttf" crossorigin>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="../001-Home/styles.css">
-  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
@@ -26,82 +26,82 @@
   </header>
 
   <main id="contenido" class="site-main" tabindex="-1">
-    <section class="cart-page" aria-labelledby="cart-title">
-      <header class="cart-heading">
-        <p class="eyebrow">NOIR ÉDITION · SELECCIÓN</p>
-        <h1 id="cart-title">Tu selección</h1>
-        <p class="cart-intro">Tres siluetas, un lenguaje propio.</p>
+    <section class="cart-page grid grid-cols-1 gap-10 px-(--page-gutter) py-[clamp(3.5rem,7vw,6.5rem)] min-[42rem]:grid-cols-[minmax(0,1.55fr)_minmax(16rem,0.8fr)] min-[42rem]:items-start min-[42rem]:gap-x-[clamp(2rem,5vw,5rem)] min-[72rem]:gap-x-[clamp(4rem,8vw,8rem)] [&_:focus-visible]:outline-[3px_solid_var(--color-accent)] [&_:focus-visible]:outline-offset-4" aria-labelledby="cart-title">
+      <header class="cart-heading border-b border-[rgb(12_18_12_/_24%)] pb-7 min-[42rem]:col-span-full">
+        <p class="eyebrow text-[#454a47]">NOIR ÉDITION · SELECCIÓN</p>
+        <h1 class="m-0 font-[family-name:var(--font-display)] text-[clamp(3.5rem,11vw,7.25rem)] leading-[0.9] font-normal tracking-[0.01em]" id="cart-title">Tu selección</h1>
+        <p class="cart-intro mt-5 mb-0 text-[0.95rem] text-[#454a47]">Tres siluetas, un lenguaje propio.</p>
       </header>
 
-      <section class="cart-items" aria-labelledby="items-title">
-        <div class="cart-section-heading">
-          <h2 id="items-title">Prendas seleccionadas</h2>
-          <p>3 artículos</p>
+      <section class="cart-items grid min-w-0 content-start gap-[0.85rem]" aria-labelledby="items-title">
+        <div class="cart-section-heading mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
+          <h2 class="m-0 font-[family-name:var(--font-accent)] text-[1rem] leading-[1.4] font-normal tracking-[0.08em] uppercase" id="items-title">Prendas seleccionadas</h2>
+          <p class="m-0 text-[0.8rem] text-[#454a47]">3 artículos</p>
         </div>
 
-        <article class="cart-item product-card" aria-labelledby="item-jacket-title" data-product-ref="chaqueta-piel-bordada">
-          <a class="product-image-link cart-item-image-link" href="../003-Vista-producto/Producto.html" aria-label="Ver Chaqueta de piel bordada">
-            <img class="cart-item-image" src="../../IMG/CHAQUETA.jpg" alt="Vista posterior de una chaqueta oscura con bordados en relieve y cierres metálicos." width="240" height="300">
+        <article class="cart-item grid min-w-0 grid-cols-1 gap-[0.85rem] rounded-xl border border-[rgb(12_18_12_/_10%)] bg-[#e6ecec] p-4 shadow-sm min-[42rem]:grid-cols-[minmax(5rem,7rem)_minmax(0,1fr)_minmax(7rem,0.75fr)] min-[42rem]:items-center min-[42rem]:gap-[clamp(0.65rem,1.6vw,1rem)] min-[42rem]:p-[clamp(0.7rem,1.8vw,1.15rem)] min-[72rem]:grid-cols-[minmax(7.5rem,9rem)_minmax(0,1fr)_minmax(9rem,0.75fr)] min-[72rem]:gap-[clamp(0.9rem,1.8vw,1.4rem)] min-[72rem]:p-[clamp(1rem,1.8vw,1.4rem)]" aria-labelledby="item-jacket-title" data-product-ref="chaqueta-piel-bordada">
+          <a class="cart-item-image-link group col-span-full block min-w-0 overflow-hidden rounded-[0.35rem] bg-(--color-surface) min-[42rem]:col-auto" href="../003-Vista-producto/Producto.html" aria-label="Ver Chaqueta de piel bordada">
+            <img class="cart-item-image block aspect-[16/7] w-full bg-(--color-surface) object-cover transition-transform duration-[180ms] ease-[ease] group-hover:scale-[1.035] motion-reduce:transition-none min-[42rem]:aspect-[4/5]" src="../../IMG/CHAQUETA.jpg" alt="Vista posterior de una chaqueta oscura con bordados en relieve y cierres metálicos." width="240" height="300">
           </a>
-          <div class="cart-item-details">
-            <h3 id="item-jacket-title"><a href="../003-Vista-producto/Producto.html">Chaqueta de piel bordada</a></h3>
-            <p class="cart-item-variant">Negro <span aria-hidden="true">·</span> Talla M</p>
-            <p class="cart-item-quantity">Cantidad: <span>1</span></p>
-            <a class="cart-product-link" href="../003-Vista-producto/Producto.html">Ver producto</a>
+          <div class="cart-item-details min-w-0">
+            <h3 class="m-0 text-[0.95rem] leading-[1.35] font-bold [overflow-wrap:anywhere] min-[72rem]:text-[1.05rem]" id="item-jacket-title"><a class="text-inherit no-underline underline-offset-[0.2em] hover:underline focus-visible:underline" href="../003-Vista-producto/Producto.html">Chaqueta de piel bordada</a></h3>
+            <p class="cart-item-variant mt-[0.45rem] mb-0 text-[0.82rem] text-[#454a47]">Negro <span aria-hidden="true">·</span> Talla M</p>
+            <p class="cart-item-quantity mt-[0.45rem] mb-0 text-[0.82rem] text-[#454a47]">Cantidad: <span class="font-bold text-(--color-ink)">1</span></p>
+            <a class="cart-product-link mt-[0.8rem] inline-block text-[0.75rem] font-bold tracking-[0.06em] text-(--color-ink) uppercase decoration-1 underline-offset-[0.25em] hover:text-(--color-accent)!" href="../003-Vista-producto/Producto.html">Ver producto</a>
           </div>
-          <div class="cart-item-pricing">
+          <div class="cart-item-pricing col-start-1 grid min-w-0 content-start gap-[0.35rem] border-t border-[rgb(12_18_12_/_15%)] pt-3 min-[42rem]:col-auto min-[42rem]:justify-items-end min-[42rem]:gap-[0.45rem] min-[42rem]:self-center min-[42rem]:border-t-0 min-[42rem]:pt-0 [&_p]:m-0 [&_p]:flex [&_p]:items-baseline [&_p]:justify-between [&_p]:gap-3 [&_p]:text-[0.78rem] [&_p]:text-[#454a47] min-[42rem]:[&_p]:w-full min-[42rem]:[&_p]:flex-wrap min-[42rem]:[&_p]:justify-end min-[42rem]:[&_p]:gap-1 min-[42rem]:[&_p]:text-right min-[42rem]:[&_p_span]:text-right min-[42rem]:[&_p_span]:after:content-[':'] [&_strong]:flex-none [&_strong]:text-[0.83rem] [&_strong]:text-(--color-ink) [&_strong]:tabular-nums">
             <p><span>Precio unitario</span><strong>900,00&nbsp;€</strong></p>
             <p><span>Subtotal</span><strong>900,00&nbsp;€</strong></p>
           </div>
         </article>
 
-        <article class="cart-item product-card" aria-labelledby="item-shirt-title" data-product-ref="camiseta-grafica-manga-larga">
-          <a class="product-image-link cart-item-image-link" href="../003-Vista-producto/Producto.html" aria-label="Ver Camiseta gráfica de manga larga">
-            <img class="cart-item-image" src="../../IMG/SHIRT.jpg" alt="Camiseta gris de manga larga con ilustraciones de inspiración renacentista y gótica." width="240" height="300" loading="lazy">
+        <article class="cart-item grid min-w-0 grid-cols-1 gap-[0.85rem] rounded-xl border border-[rgb(12_18_12_/_10%)] bg-[#e6ecec] p-4 shadow-sm min-[42rem]:grid-cols-[minmax(5rem,7rem)_minmax(0,1fr)_minmax(7rem,0.75fr)] min-[42rem]:items-center min-[42rem]:gap-[clamp(0.65rem,1.6vw,1rem)] min-[42rem]:p-[clamp(0.7rem,1.8vw,1.15rem)] min-[72rem]:grid-cols-[minmax(7.5rem,9rem)_minmax(0,1fr)_minmax(9rem,0.75fr)] min-[72rem]:gap-[clamp(0.9rem,1.8vw,1.4rem)] min-[72rem]:p-[clamp(1rem,1.8vw,1.4rem)]" aria-labelledby="item-shirt-title" data-product-ref="camiseta-grafica-manga-larga">
+          <a class="cart-item-image-link group col-span-full block min-w-0 overflow-hidden rounded-[0.35rem] bg-(--color-surface) min-[42rem]:col-auto" href="../003-Vista-producto/Producto.html" aria-label="Ver Camiseta gráfica de manga larga">
+            <img class="cart-item-image block aspect-[16/7] w-full bg-(--color-surface) object-cover transition-transform duration-[180ms] ease-[ease] group-hover:scale-[1.035] motion-reduce:transition-none min-[42rem]:aspect-[4/5]" src="../../IMG/SHIRT.jpg" alt="Camiseta gris de manga larga con ilustraciones de inspiración renacentista y gótica." width="240" height="300" loading="lazy">
           </a>
-          <div class="cart-item-details">
-            <h3 id="item-shirt-title"><a href="../003-Vista-producto/Producto.html">Camiseta gráfica de manga larga</a></h3>
-            <p class="cart-item-variant">Gris <span aria-hidden="true">·</span> Talla M</p>
-            <p class="cart-item-quantity">Cantidad: <span>1</span></p>
-            <a class="cart-product-link" href="../003-Vista-producto/Producto.html">Ver producto</a>
+          <div class="cart-item-details min-w-0">
+            <h3 class="m-0 text-[0.95rem] leading-[1.35] font-bold [overflow-wrap:anywhere] min-[72rem]:text-[1.05rem]" id="item-shirt-title"><a class="text-inherit no-underline underline-offset-[0.2em] hover:underline focus-visible:underline" href="../003-Vista-producto/Producto.html">Camiseta gráfica de manga larga</a></h3>
+            <p class="cart-item-variant mt-[0.45rem] mb-0 text-[0.82rem] text-[#454a47]">Gris <span aria-hidden="true">·</span> Talla M</p>
+            <p class="cart-item-quantity mt-[0.45rem] mb-0 text-[0.82rem] text-[#454a47]">Cantidad: <span class="font-bold text-(--color-ink)">1</span></p>
+            <a class="cart-product-link mt-[0.8rem] inline-block text-[0.75rem] font-bold tracking-[0.06em] text-(--color-ink) uppercase decoration-1 underline-offset-[0.25em] hover:text-(--color-accent)!" href="../003-Vista-producto/Producto.html">Ver producto</a>
           </div>
-          <div class="cart-item-pricing">
+          <div class="cart-item-pricing col-start-1 grid min-w-0 content-start gap-[0.35rem] border-t border-[rgb(12_18_12_/_15%)] pt-3 min-[42rem]:col-auto min-[42rem]:justify-items-end min-[42rem]:gap-[0.45rem] min-[42rem]:self-center min-[42rem]:border-t-0 min-[42rem]:pt-0 [&_p]:m-0 [&_p]:flex [&_p]:items-baseline [&_p]:justify-between [&_p]:gap-3 [&_p]:text-[0.78rem] [&_p]:text-[#454a47] min-[42rem]:[&_p]:w-full min-[42rem]:[&_p]:flex-wrap min-[42rem]:[&_p]:justify-end min-[42rem]:[&_p]:gap-1 min-[42rem]:[&_p]:text-right min-[42rem]:[&_p_span]:text-right min-[42rem]:[&_p_span]:after:content-[':'] [&_strong]:flex-none [&_strong]:text-[0.83rem] [&_strong]:text-(--color-ink) [&_strong]:tabular-nums">
             <p><span>Precio unitario</span><strong>180,00&nbsp;€</strong></p>
             <p><span>Subtotal</span><strong>180,00&nbsp;€</strong></p>
           </div>
         </article>
 
-        <article class="cart-item product-card" aria-labelledby="item-denim-title" data-product-ref="vaqueros-grafico-alas">
-          <a class="product-image-link cart-item-image-link" href="../003-Vista-producto/Producto.html" aria-label="Ver Vaqueros con gráfico de alas">
-            <img class="cart-item-image" src="../../IMG/WING.jpg" alt="Vaqueros negros holgados con motivos de alas brillantes en los bolsillos traseros." width="240" height="300" loading="lazy">
+        <article class="cart-item grid min-w-0 grid-cols-1 gap-[0.85rem] rounded-xl border border-[rgb(12_18_12_/_10%)] bg-[#e6ecec] p-4 shadow-sm min-[42rem]:grid-cols-[minmax(5rem,7rem)_minmax(0,1fr)_minmax(7rem,0.75fr)] min-[42rem]:items-center min-[42rem]:gap-[clamp(0.65rem,1.6vw,1rem)] min-[42rem]:p-[clamp(0.7rem,1.8vw,1.15rem)] min-[72rem]:grid-cols-[minmax(7.5rem,9rem)_minmax(0,1fr)_minmax(9rem,0.75fr)] min-[72rem]:gap-[clamp(0.9rem,1.8vw,1.4rem)] min-[72rem]:p-[clamp(1rem,1.8vw,1.4rem)]" aria-labelledby="item-denim-title" data-product-ref="vaqueros-grafico-alas">
+          <a class="cart-item-image-link group col-span-full block min-w-0 overflow-hidden rounded-[0.35rem] bg-(--color-surface) min-[42rem]:col-auto" href="../003-Vista-producto/Producto.html" aria-label="Ver Vaqueros con gráfico de alas">
+            <img class="cart-item-image block aspect-[16/7] w-full bg-(--color-surface) object-cover transition-transform duration-[180ms] ease-[ease] group-hover:scale-[1.035] motion-reduce:transition-none min-[42rem]:aspect-[4/5]" src="../../IMG/WING.jpg" alt="Vaqueros negros holgados con motivos de alas brillantes en los bolsillos traseros." width="240" height="300" loading="lazy">
           </a>
-          <div class="cart-item-details">
-            <h3 id="item-denim-title"><a href="../003-Vista-producto/Producto.html">Vaqueros con gráfico de alas</a></h3>
-            <p class="cart-item-variant">Negro <span aria-hidden="true">·</span> Talla 32</p>
-            <p class="cart-item-quantity">Cantidad: <span>1</span></p>
-            <a class="cart-product-link" href="../003-Vista-producto/Producto.html">Ver producto</a>
+          <div class="cart-item-details min-w-0">
+            <h3 class="m-0 text-[0.95rem] leading-[1.35] font-bold [overflow-wrap:anywhere] min-[72rem]:text-[1.05rem]" id="item-denim-title"><a class="text-inherit no-underline underline-offset-[0.2em] hover:underline focus-visible:underline" href="../003-Vista-producto/Producto.html">Vaqueros con gráfico de alas</a></h3>
+            <p class="cart-item-variant mt-[0.45rem] mb-0 text-[0.82rem] text-[#454a47]">Negro <span aria-hidden="true">·</span> Talla 32</p>
+            <p class="cart-item-quantity mt-[0.45rem] mb-0 text-[0.82rem] text-[#454a47]">Cantidad: <span class="font-bold text-(--color-ink)">1</span></p>
+            <a class="cart-product-link mt-[0.8rem] inline-block text-[0.75rem] font-bold tracking-[0.06em] text-(--color-ink) uppercase decoration-1 underline-offset-[0.25em] hover:text-(--color-accent)!" href="../003-Vista-producto/Producto.html">Ver producto</a>
           </div>
-          <div class="cart-item-pricing">
+          <div class="cart-item-pricing col-start-1 grid min-w-0 content-start gap-[0.35rem] border-t border-[rgb(12_18_12_/_15%)] pt-3 min-[42rem]:col-auto min-[42rem]:justify-items-end min-[42rem]:gap-[0.45rem] min-[42rem]:self-center min-[42rem]:border-t-0 min-[42rem]:pt-0 [&_p]:m-0 [&_p]:flex [&_p]:items-baseline [&_p]:justify-between [&_p]:gap-3 [&_p]:text-[0.78rem] [&_p]:text-[#454a47] min-[42rem]:[&_p]:w-full min-[42rem]:[&_p]:flex-wrap min-[42rem]:[&_p]:justify-end min-[42rem]:[&_p]:gap-1 min-[42rem]:[&_p]:text-right min-[42rem]:[&_p_span]:text-right min-[42rem]:[&_p_span]:after:content-[':'] [&_strong]:flex-none [&_strong]:text-[0.83rem] [&_strong]:text-(--color-ink) [&_strong]:tabular-nums">
             <p><span>Precio unitario</span><strong>300,00&nbsp;€</strong></p>
             <p><span>Subtotal</span><strong>300,00&nbsp;€</strong></p>
           </div>
         </article>
       </section>
 
-      <aside class="cart-summary" aria-labelledby="summary-title">
-        <h2 id="summary-title">Resumen del pedido</h2>
-        <dl class="summary-lines">
+      <aside class="cart-summary min-w-0 self-start bg-(--color-surface) p-6 min-[42rem]:sticky min-[42rem]:top-6 min-[72rem]:p-8" aria-labelledby="summary-title">
+        <h2 class="m-0 border-b border-[rgb(12_18_12_/_26%)] pb-4 font-[family-name:var(--font-accent)] text-[1rem] leading-[1.4] font-normal tracking-[0.08em] uppercase" id="summary-title">Resumen del pedido</h2>
+        <dl class="summary-lines mt-[1.15rem] mb-6 grid gap-[0.8rem] text-[0.86rem] [&>div]:flex [&>div]:items-baseline [&>div]:justify-between [&>div]:gap-3 [&_dt]:text-[#303735] [&_dd]:m-0 [&_dd]:flex-none [&_dd]:text-right [&_dd]:tabular-nums">
           <div><dt>Subtotal sin IVA</dt><dd>1.150,00&nbsp;€</dd></div>
           <div><dt>IVA incluido (20&nbsp;%)</dt><dd>230,00&nbsp;€</dd></div>
-          <div class="summary-total"><dt>Total TTC</dt><dd>1.380,00&nbsp;€</dd></div>
+          <div class="summary-total mt-[0.35rem] border-t border-[rgb(12_18_12_/_26%)] pt-4 text-[1rem] font-bold [&_dt]:text-(--color-ink)! [&_dd]:text-(--color-ink)"><dt>Total TTC</dt><dd>1.380,00&nbsp;€</dd></div>
         </dl>
-        <a class="cart-checkout-link" href="../005-Checkout/Checkout.html">Continuar a la compra <span aria-hidden="true">↗</span></a>
-        <a class="cart-return-link" href="../002-Catalogo/Catalogo.html">Volver al catálogo</a>
+        <a class="cart-checkout-link flex min-h-13 items-center justify-between gap-4 bg-(--color-ink) px-4 py-[0.85rem] text-[0.75rem] font-bold tracking-[0.08em] text-(--color-paper)! uppercase no-underline hover:bg-[#303735] hover:underline hover:underline-offset-[0.25em]" href="../005-Checkout/Checkout.html">Continuar a la compra <span class="text-[1.1rem]" aria-hidden="true">↗</span></a>
+        <a class="cart-return-link mt-4 inline-block text-[0.82rem] font-bold text-(--color-ink) underline-offset-[0.2em] hover:text-[#303735]!" href="../002-Catalogo/Catalogo.html">Volver al catálogo</a>
       </aside>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer [&_a:focus-visible]:outline-(--color-paper)! [&_summary:focus-visible]:outline-(--color-paper)!">
     <div class="footer-main">
       <section class="footer-intro" aria-labelledby="footer-brand-title">
         <a class="footer-brand" id="footer-brand-title" href="../001-Home/Home.html">NOIR ÉDITION</a>
