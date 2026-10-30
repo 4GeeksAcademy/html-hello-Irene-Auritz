@@ -1,51 +1,53 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth scroll-pt-6 motion-reduce:scroll-auto">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Explora el universo visual de NOIR ÉDITION: siluetas urbanas, capas expresivas y una selección editorial de moda.">
   <meta name="theme-color" content="#0c120c">
   <title>NOIR ÉDITION — Moda urbana, mirada editorial</title>
+  <link rel="preload" href="../../IMG/FULL.jpg" as="image" type="image/jpeg" fetchpriority="high">
   <link rel="preload" href="../../FONTS/OldLondon.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+<body class="m-0 bg-[var(--color-paper)] font-[family-name:var(--font-body)] text-base leading-[1.55] text-[var(--color-ink)] antialiased [&_a:focus-visible]:outline-3 [&_a:focus-visible]:outline-[var(--color-accent)] [&_a:focus-visible]:outline-offset-4 [&_.eyebrow]:mt-0 [&_.eyebrow]:mb-[0.85rem] [&_.eyebrow]:font-[family-name:var(--font-accent)] [&_.eyebrow]:text-[0.68rem] [&_.eyebrow]:font-bold [&_.eyebrow]:tracking-[0.2em] [&_.eyebrow]:leading-[1.4] [&_.eyebrow]:uppercase motion-reduce:[&_*]:transition-none motion-reduce:[&_*]:animate-none">
+  <a class="skip-link fixed top-3 left-3 z-20 -translate-y-[160%] bg-[var(--color-paper)] px-4 py-3 font-bold underline focus:translate-y-0" href="#contenido">Saltar al contenido principal</a>
 
-  <header class="site-header">
-    <a class="site-brand" href="Home.html" aria-label="NOIR ÉDITION — Inicio">NOIR ÉDITION</a>
-    <nav class="site-nav" aria-label="Navegación principal">
+  <header class="site-header relative z-[2] grid grid-cols-[1fr_auto] items-center gap-x-8 gap-y-5 border-b border-[rgb(12_18_12_/_14%)] bg-[#ecebf3] px-[var(--page-gutter)] py-[1.15rem] min-[42rem]:grid-cols-[auto_1fr_auto] min-[72rem]:min-h-[5.5rem] min-[72rem]:py-5">
+    <a class="site-brand w-fit font-[family-name:var(--font-display)] text-[1.75rem] leading-none tracking-[0.025em] no-underline" href="Home.html" aria-label="NOIR ÉDITION — Inicio">NOIR ÉDITION</a>
+    <nav class="site-nav col-span-full row-start-2 flex flex-wrap items-center gap-x-[1.35rem] gap-y-[0.55rem] min-[42rem]:col-span-1 min-[42rem]:row-start-auto min-[42rem]:justify-center min-[42rem]:gap-x-4 min-[42rem]:gap-y-3 min-[72rem]:gap-[1.4rem] [&_a]:w-fit [&_a]:font-[family-name:var(--font-accent)] [&_a]:text-xs [&_a]:font-normal [&_a]:tracking-[0.105em] [&_a]:leading-[1.4] [&_a]:no-underline [&_a]:uppercase min-[42rem]:[&_a]:text-[0.68rem] min-[72rem]:[&_a]:text-[0.72rem] [&_a:hover]:text-[var(--color-accent)] [&_a:hover]:underline [&_a:hover]:decoration-[var(--color-accent)] [&_a:hover]:decoration-2 [&_a:hover]:underline-offset-[0.3em] [&_a[aria-current=page]]:underline [&_a[aria-current=page]]:decoration-[var(--color-accent)] [&_a[aria-current=page]]:decoration-2 [&_a[aria-current=page]]:underline-offset-[0.4rem]" aria-label="Navegación principal">
       <a href="Home.html" aria-current="page">Inicio</a>
       <a href="../002-Catalogo/Catalogo.html">Catálogo</a>
       <a href="../003-Vista-producto/Producto.html">Producto</a>
       <a href="../004-Carrito/Carrito.html">Carrito</a>
       <a href="../005-Checkout/Checkout.html">Checkout</a>
     </nav>
-    <p class="header-note">París · Estudio de formas</p>
+    <p class="header-note m-0 hidden justify-self-end font-[family-name:var(--font-accent)] text-[0.68rem] tracking-[0.12em] text-right text-[#454a47] uppercase min-[42rem]:block">París · Estudio de formas</p>
   </header>
 
-  <main id="contenido" class="site-main">
-    <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="../../IMG/FULL.jpg" alt="Modelo desfila con un conjunto urbano oscuro, bolso de mano y tacones en una calle." fetchpriority="high">
-      <div class="hero-shade" aria-hidden="true"></div>
-      <div class="hero-copy">
+  <main id="contenido" class="site-main mx-auto w-full max-w-[100rem] [&_.product-card]:min-w-0 [&_.product-image-link]:block [&_.product-image-link]:overflow-hidden [&_.product-image-link]:bg-[var(--color-surface)] [&_.product-image-link_img]:w-full [&_.product-image-link_img]:aspect-[4/5] [&_.product-image-link_img]:object-cover [&_.product-image-link_img]:transition-transform [&_.product-image-link_img]:duration-[350ms] [&_.product-image-link_img]:ease-[ease] [&_.product-image-link:hover_img]:scale-[1.025] [&_.product-caption]:flex [&_.product-caption]:justify-between [&_.product-caption]:gap-3 [&_.product-caption]:pt-[0.8rem] [&_.product-caption_h3]:m-0 [&_.product-caption_h3]:text-[0.76rem] [&_.product-caption_h3]:leading-[1.45] [&_.product-caption_h3]:font-bold [&_.product-caption_h3_a]:underline [&_.product-caption_h3_a]:decoration-1 [&_.product-caption_h3_a]:underline-offset-[0.2em] [&_.product-caption_p]:m-0 [&_.product-caption_p]:shrink-0 [&_.product-caption_p]:text-[0.68rem] [&_.product-caption_p]:leading-[1.45] [&_.product-caption_p]:tracking-[0.08em] [&_.product-caption_p]:uppercase [&_.product-caption_p]:text-[#454a47]">
+    <section class="hero relative flex min-h-[clamp(34rem,73svh,58rem)] items-end overflow-hidden bg-[#0c120c] text-[#ecebf3]" aria-labelledby="hero-title">
+      <img class="hero-image absolute inset-0 h-full w-full object-cover object-[center_40%]" src="../../IMG/FULL.jpg" alt="Modelo desfila con un conjunto urbano oscuro, bolso de mano y tacones en una calle." width="1080" height="1350" loading="eager" decoding="async" fetchpriority="high">
+      <div class="hero-shade absolute inset-0 h-full w-full bg-[linear-gradient(90deg,rgb(12_18_12_/_77%)_0%,rgb(12_18_12_/_43%)_48%,rgb(12_18_12_/_6%)_100%),linear-gradient(0deg,rgb(12_18_12_/_36%),transparent_48%)]" aria-hidden="true"></div>
+      <div class="hero-copy relative z-[1] w-full max-w-[52rem] px-[var(--page-gutter)] pt-20 pb-[5.25rem]">
         <p class="eyebrow">NOIR ÉDITION · ESTUDIO VISUAL</p>
-        <h1 id="hero-title">Vestir la<br>noche urbana</h1>
-        <p class="hero-description">Siluetas con carácter. Una mirada libre sobre la forma y la textura.</p>
-        <a class="text-link hero-link" href="#seleccion">Explorar la selección <span aria-hidden="true">↘</span></a>
+        <h1 class="m-0 font-[family-name:var(--font-display)] text-[clamp(2.75rem,11vw,9rem)] font-normal tracking-[0.01em] leading-[0.82]" id="hero-title">Vestir la<br>noche urbana</h1>
+        <p class="hero-description mt-6 mb-7 max-w-[29rem] text-[clamp(1rem,2vw,1.18rem)]">Siluetas con carácter. Una mirada libre sobre la forma y la textura.</p>
+        <a class="text-link hero-link inline-flex min-h-11 items-center gap-5 border-b border-current text-xs font-bold tracking-[0.1em] no-underline uppercase [&_span]:text-[1.1rem]" href="#seleccion">Explorar la selección <span aria-hidden="true">↘</span></a>
       </div>
-      <p class="hero-index" aria-hidden="true">01 / 20</p>
+      <p class="hero-index absolute right-[var(--page-gutter)] bottom-6 z-[1] m-0 text-[0.7rem] tracking-[0.15em]" aria-hidden="true">01 / 20</p>
     </section>
 
-    <section id="seleccion" class="collection-section" aria-labelledby="selection-title">
-      <div class="section-heading">
+    <section id="seleccion" class="collection-section px-[var(--page-gutter)] py-[clamp(4rem,8vw,7.5rem)]" aria-labelledby="selection-title">
+      <div class="section-heading mb-8 flex flex-wrap items-end justify-between gap-x-8 gap-y-4 [&_h2]:m-0 [&_h2]:font-[family-name:var(--font-display)] [&_h2]:text-[clamp(2.8rem,6vw,5rem)] [&_h2]:font-normal [&_h2]:leading-[0.95] [&_.eyebrow]:text-[#454a47]">
         <div>
           <p class="eyebrow">FORMAS EN MOVIMIENTO</p>
           <h2 id="selection-title">Novedades</h2>
         </div>
-        <p class="section-note">Volúmenes, capas y contrastes.</p>
+        <p class="section-note mt-0 mb-[0.35rem] max-w-64 text-[0.85rem] text-left text-[#454a47] min-[42rem]:text-right">Volúmenes, capas y contrastes.</p>
       </div>
-      <div class="product-grid">
+      <div class="product-grid grid grid-cols-[minmax(0,1fr)] gap-x-4 gap-y-[2.4rem] min-[42rem]:grid-cols-2 min-[42rem]:gap-x-5 min-[42rem]:gap-y-12 min-[72rem]:grid-cols-4 min-[72rem]:gap-x-4">
         <article class="product-card">
           <a class="product-image-link" href="../003-Vista-producto/Producto.html" aria-label="Ver chaqueta de piel con detalles bordados"><img src="../../IMG/CHAQUETA.jpg" alt="Vista posterior de una chaqueta oscura con bordados en relieve y cierres metálicos." loading="lazy"></a>
           <div class="product-caption"><h3><a href="../003-Vista-producto/Producto.html">Chaqueta de piel bordada</a></h3><p>Silueta 01</p></div>
@@ -89,23 +91,23 @@
       </div>
     </section>
 
-    <section class="editorial-band" aria-labelledby="editorial-title">
-      <div class="editorial-copy">
+    <section class="editorial-band grid min-h-[25rem] items-center bg-[#0c120c] px-[var(--page-gutter)] py-[clamp(3rem,7vw,6rem)] text-[#ecebf3] min-[42rem]:min-h-[30rem] min-[72rem]:min-h-[34rem]" aria-labelledby="editorial-title">
+      <div class="editorial-copy max-w-[43rem]">
         <p class="eyebrow">CUERPO · TEXTURA · CIUDAD</p>
-        <h2 id="editorial-title">Una forma<br>de mirar distinto.</h2>
-        <p>Contrastes de materia y proporción componen un lenguaje propio.</p>
+        <h2 class="m-0 font-[family-name:var(--font-display)] text-[clamp(3.7rem,10vw,7.5rem)] font-normal tracking-[0.01em] leading-[0.82]" id="editorial-title">Una forma<br>de mirar distinto.</h2>
+        <p class="mt-6 mb-0 max-w-[25rem] text-[#e0e0df]">Contrastes de materia y proporción componen un lenguaje propio.</p>
       </div>
     </section>
 
-    <section class="collection-section collection-section--archive" aria-labelledby="archive-title">
-      <div class="section-heading">
+    <section class="collection-section collection-section--archive bg-[#c7d6d5] px-[var(--page-gutter)] py-[clamp(4rem,8vw,7.5rem)] [&_div.product-caption_p]:text-[#303735]" aria-labelledby="archive-title">
+      <div class="section-heading mb-8 flex flex-wrap items-end justify-between gap-x-8 gap-y-4 [&_h2]:m-0 [&_h2]:font-[family-name:var(--font-display)] [&_h2]:text-[clamp(2.8rem,6vw,5rem)] [&_h2]:font-normal [&_h2]:leading-[0.95] [&_.eyebrow]:text-[#303735]">
         <div>
           <p class="eyebrow">ESTUDIO DE SILUETAS</p>
           <h2 id="archive-title">Más vendidos</h2>
         </div>
-        <p class="section-note">Una exploración de gestos y materia.</p>
+        <p class="section-note mt-0 mb-[0.35rem] max-w-64 text-[0.85rem] text-left text-[#303735] min-[42rem]:text-right">Una exploración de gestos y materia.</p>
       </div>
-      <div class="product-grid">
+      <div class="product-grid grid grid-cols-[minmax(0,1fr)] gap-x-4 gap-y-[2.4rem] min-[42rem]:grid-cols-2 min-[42rem]:gap-x-5 min-[42rem]:gap-y-12 min-[72rem]:grid-cols-4 min-[72rem]:gap-x-4">
         <article class="product-card">
           <a class="product-image-link" href="../003-Vista-producto/Producto.html" aria-label="Ver pantalones jogger claros con gráficos"><img src="../../IMG/SWP.jpg" alt="Pantalones amplios claros con cordón y gráficos góticos en las perneras." loading="lazy"></a>
           <div class="product-caption"><h3><a href="../003-Vista-producto/Producto.html">Jogger gráfico de corte amplio</a></h3><p>Silueta 11</p></div>
@@ -146,19 +148,19 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-main">
+  <footer class="site-footer bg-[var(--color-ink)] text-[var(--color-paper)] px-[var(--page-gutter)] pt-[clamp(3rem,6vw,5rem)] pb-5 [&_a:focus-visible]:outline-[var(--color-paper)] [&_h2]:mt-0 [&_h2]:mb-4 [&_h2]:font-[family-name:var(--font-body)] [&_h2]:text-[0.72rem] [&_h2]:font-bold [&_h2]:tracking-[0.14em] [&_h2]:leading-[1.4] [&_h2]:uppercase">
+    <div class="footer-main mx-auto grid w-full max-w-[100rem] grid-cols-1 gap-x-8 gap-y-10 pb-11 min-[42rem]:grid-cols-2 min-[42rem]:items-start min-[72rem]:grid-cols-[minmax(0,1.2fr)_minmax(8rem,0.75fr)_minmax(9rem,0.9fr)_minmax(14rem,1.35fr)] min-[72rem]:gap-x-[clamp(1.5rem,3vw,3rem)]">
       <section class="footer-intro" aria-labelledby="footer-brand-title">
-        <a class="footer-brand" id="footer-brand-title" href="Home.html">NOIR ÉDITION</a>
-        <p class="footer-statement">Una exploración de la forma urbana, el gesto y la materia.</p>
-        <nav class="footer-social" aria-label="Redes sociales">
+        <a class="footer-brand inline-block w-fit font-[family-name:var(--font-display)] text-[clamp(2rem,5vw,2.8rem)] leading-none tracking-[0.025em] no-underline" id="footer-brand-title" href="Home.html">NOIR ÉDITION</a>
+        <p class="footer-statement mt-4 mb-[1.35rem] max-w-72 text-[0.9rem] text-[#e0e0df]">Una exploración de la forma urbana, el gesto y la materia.</p>
+        <nav class="footer-social flex flex-wrap gap-[0.65rem] [&_a]:inline-flex [&_a]:min-w-[2.7rem] [&_a]:min-h-[2.7rem] [&_a]:items-center [&_a]:justify-center [&_a]:border [&_a]:border-[#ecebf3]/55 [&_a]:rounded-full [&_a]:text-[0.72rem] [&_a]:font-bold [&_a]:tracking-[0.03em] [&_a]:no-underline [&_a]:transition-colors [&_a]:duration-[160ms] [&_a]:ease-[ease] [&_a:hover]:bg-[var(--color-paper)] [&_a:hover]:text-[var(--color-ink)]" aria-label="Redes sociales">
           <a href="https://www.instagram.com/" aria-label="Instagram"><svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.7" cy="6.5" r="1" fill="currentColor"/></svg></a>
           <a href="https://www.pinterest.com/" aria-label="Pinterest"><svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12.4 3.5c-4.9 0-7.4 3.5-7.4 6.5 0 2.2.8 4.1 2.6 4.8.3.1.5 0 .6-.3l.2-.9c.1-.3 0-.4-.2-.7-.5-.6-.8-1.3-.8-2.4 0-3.1 2.3-5.9 6-5.9 3.3 0 5.1 2 5.1 4.7 0 3.5-1.6 6.5-4 6.5-1.3 0-2.3-1.1-2-2.5.4-1.7 1.1-3.6 1.1-4.8 0-1.1-.6-2-1.8-2-1.4 0-2.5 1.4-2.5 3.3 0 1.2.4 2 .4 2s-1.4 5.8-1.6 6.8c-.5 2-.1 4.5 0 4.8 0 .2.3.2.4.1.2-.3 1.7-2.1 2.2-4.1.1-.6.8-3 .8-3 .4.8 1.7 1.5 3 1.5 4 0 6.7-3.7 6.7-8.6C21.2 7 17.7 3.5 12.4 3.5Z" fill="currentColor" transform="translate(-1 -1) scale(.96)"/></svg></a>
           <a href="https://www.tiktok.com/" aria-label="TikTok"><svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M14 3h3.2c.2 1.8 1.2 3.3 3.3 3.8v3.1a9.2 9.2 0 0 1-3.3-1.1v6.5a6.2 6.2 0 1 1-6.2-6.2c.4 0 .8 0 1.2.1v3.3a3 3 0 1 0 1.8 2.8V3Z" fill="currentColor"/></svg></a>
         </nav>
       </section>
 
-      <nav class="footer-nav" aria-label="Explorar la tienda">
+      <nav class="footer-nav flex flex-col flex-wrap items-start gap-[0.7rem] [&_h2]:mb-[0.2rem] [&_a]:w-fit [&_a]:font-[family-name:var(--font-accent)] [&_a]:text-[0.78rem] [&_a]:font-normal [&_a]:tracking-[0.025em] [&_a]:leading-normal [&_a]:no-underline [&_a:hover]:underline [&_a:hover]:decoration-2 [&_a:hover]:underline-offset-[0.25em]" aria-label="Explorar la tienda">
         <h2>Explorar</h2>
         <a href="Home.html">Inicio</a>
         <a href="../002-Catalogo/Catalogo.html">Catálogo</a>
@@ -167,7 +169,7 @@
         <a href="../005-Checkout/Checkout.html">Checkout</a>
       </nav>
 
-      <nav class="footer-nav footer-nav--legal" aria-label="Información legal y ayuda">
+      <nav class="footer-nav footer-nav--legal flex flex-col flex-wrap items-start gap-[0.7rem] [&_h2]:mb-[0.2rem] [&_a]:w-fit [&_a]:font-[family-name:var(--font-accent)] [&_a]:text-[0.78rem] [&_a]:font-normal [&_a]:tracking-[0.025em] [&_a]:leading-normal [&_a]:no-underline [&_a:hover]:underline [&_a:hover]:decoration-2 [&_a:hover]:underline-offset-[0.25em]" aria-label="Información legal y ayuda">
         <h2>Información</h2>
         <a href="#footer-legal">Aviso legal</a>
         <a href="#footer-privacy">Política de privacidad</a>
@@ -175,35 +177,35 @@
         <a href="#footer-contact">Contacto</a>
       </nav>
 
-      <section class="footer-contact" id="footer-contact" aria-labelledby="footer-contact-title">
+      <section class="footer-contact min-[42rem]:col-span-full min-[72rem]:col-auto" id="footer-contact" aria-labelledby="footer-contact-title">
         <h2 id="footer-contact-title">Estamos cerca</h2>
-        <address>
+        <address class="mb-5 grid gap-[0.55rem] text-[0.82rem] text-[#e0e0df] not-italic [&_a]:w-fit [&_a]:text-[var(--color-paper)] [&_a]:no-underline [&_a:hover]:underline [&_a:hover]:underline-offset-[0.25em]">
           <span>12, rue des Silhouettes, 75003 París, Francia</span>
           <a href="tel:+33100000000">+33 1 00 00 00 00</a>
           <span>bonjour@noiredition.example</span>
         </address>
-        <form class="footer-form" action="#footer-contact" method="get">
-          <fieldset disabled>
-            <legend>Formulario de contacto</legend>
+        <form class="footer-form grid gap-2 min-[42rem]:grid-cols-1 [&_label]:mt-[0.45rem] [&_label]:text-[#e0e0df] [&_label]:text-[0.72rem] min-[42rem]:[&_label]:self-end [&_input]:w-full [&_input]:min-h-11 [&_input]:px-3 [&_input]:py-[0.65rem] [&_input]:border [&_input]:border-[#aeb6b4] [&_input]:rounded-none [&_input]:bg-[#172019] [&_input:disabled]:cursor-not-allowed [&_input:disabled]:opacity-[0.82] [&_:focus-visible]:outline-3 [&_:focus-visible]:outline-offset-3 [&_:focus-visible]:outline-[var(--color-paper)]" action="#footer-contact" method="get">
+          <fieldset class="m-0 grid min-w-0 gap-2 border-0 p-0 min-[42rem]:grid-cols-2 min-[42rem]:items-end min-[72rem]:grid-cols-1" disabled>
+            <legend class="mb-[0.7rem] text-[0.72rem] font-bold min-[42rem]:col-span-full min-[72rem]:col-auto">Formulario de contacto</legend>
             <label for="footer-name">Tu nombre</label>
             <input id="footer-name" name="nombre" type="text" autocomplete="name">
             <label for="footer-email">Tu correo electrónico</label>
             <input id="footer-email" name="email" type="email" autocomplete="email">
             <label for="footer-message">¿En qué podemos ayudarte?</label>
-            <textarea id="footer-message" name="mensaje" rows="3"></textarea>
-            <button type="submit">Enviar mensaje</button>
+            <textarea class="w-full min-h-20 resize-y rounded-none border border-[#aeb6b4] bg-[#172019] px-3 py-[0.65rem] disabled:cursor-not-allowed disabled:opacity-[0.82] min-[42rem]:col-span-full min-[72rem]:col-auto" id="footer-message" name="mensaje" rows="3"></textarea>
+            <button class="mt-2 min-h-11 w-fit border border-[#aeb6b4] bg-transparent px-4 py-[0.7rem] text-[0.72rem] font-bold tracking-[0.09em] uppercase disabled:cursor-not-allowed disabled:opacity-[0.82] min-[42rem]:col-span-full min-[72rem]:col-auto" type="submit">Enviar mensaje</button>
           </fieldset>
         </form>
       </section>
     </div>
 
-    <section class="footer-assurance" aria-label="Información de compra">
+    <section class="footer-assurance mx-auto grid w-full max-w-[100rem] grid-cols-1 gap-5 border-y border-[#ecebf3]/28 py-6 min-[42rem]:grid-cols-2 min-[72rem]:grid-cols-3 min-[72rem]:gap-8 [&>div]:flex [&>div]:items-center [&>div]:gap-[0.85rem] [&_p]:m-0 [&_p]:grid [&_p]:gap-[0.15rem] [&_p]:text-[#e0e0df] [&_p]:text-[0.72rem] [&_p]:leading-[1.45] [&_strong]:text-[var(--color-paper)] [&_strong]:text-xs [&_.assurance-mark]:grid [&_.assurance-mark]:size-10 [&_.assurance-mark]:flex-[0_0_2.5rem] [&_.assurance-mark]:place-items-center [&_.assurance-mark]:rounded-full [&_.assurance-mark]:border [&_.assurance-mark]:border-[#ecebf3]/55 [&_.assurance-mark]:text-[1.1rem]" aria-label="Información de compra">
       <div><span class="assurance-mark" aria-hidden="true">✳</span><p><strong>Atención personal</strong><span>Estamos aquí para ayudarte.</span></p></div>
       <div><span class="assurance-mark" aria-hidden="true">◇</span><p><strong>Selección cuidada</strong><span>Diseño con atención al detalle.</span></p></div>
-      <div class="footer-payments"><p><strong>Formas de pago</strong><span>Tarjeta · Billetera digital</span></p></div>
+      <div class="footer-payments pl-[3.35rem] min-[42rem]:pl-0"><p><strong>Formas de pago</strong><span>Tarjeta · Billetera digital</span></p></div>
     </section>
 
-    <div class="footer-legal-details" aria-label="Información legal">
+    <div class="footer-legal-details mx-auto mt-6 grid w-full max-w-[100rem] gap-[0.7rem] min-[42rem]:grid-cols-3 [&_details]:text-[#e0e0df] [&_details]:text-[0.72rem] [&_summary]:w-fit [&_summary]:cursor-pointer [&_summary]:text-[var(--color-paper)] [&_summary]:underline [&_summary]:underline-offset-[0.2em] [&_summary:focus-visible]:outline-3 [&_summary:focus-visible]:outline-offset-3 [&_summary:focus-visible]:outline-[var(--color-paper)] [&_p]:mt-[0.65rem] [&_p]:mb-0 [&_p]:max-w-[50rem] [&_p]:leading-[1.6]" aria-label="Información legal">
       <details id="footer-legal">
         <summary>Aviso legal</summary>
         <p>NOIR ÉDITION es una identidad de marca ficticia. La dirección, el teléfono y el correo indicados son datos ficticios de contacto.</p>
@@ -218,7 +220,7 @@
       </details>
     </div>
 
-    <div class="footer-bottom">
+    <div class="footer-bottom mx-auto mt-6 flex w-full max-w-[100rem] flex-wrap justify-between gap-4 border-t border-[#ecebf3]/28 pt-4 text-[0.68rem] tracking-[0.09em] text-[#e0e0df] uppercase [&_p]:m-0 [&_a]:text-[var(--color-paper)] [&_a]:no-underline [&_a:hover]:underline [&_a:hover]:underline-offset-[0.25em]">
       <p>© NOIR ÉDITION</p>
       <a href="Home.html">Volver al inicio <span aria-hidden="true">↑</span></a>
     </div>

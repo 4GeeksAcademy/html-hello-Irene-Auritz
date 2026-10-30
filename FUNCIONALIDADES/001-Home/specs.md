@@ -1,7 +1,7 @@
 # Especificación — Home
 
 - **Funcionalidad:** `001-Home`
-- **Estado:** implementado; conservar como referencia de alcance
+- **Estado:** implementado; estilos migrados para priorizar Tailwind CSS
 - **Archivo de la página:** `Home.html`
 - **Idioma de la interfaz:** español
 
@@ -15,7 +15,7 @@ Este documento delimita la experiencia y sus criterios de aceptación. La implem
 
 ### Incluido
 
-- Una página de inicio adaptable a móvil, tableta y escritorio.
+- Una página de inicio adaptable con enfoque mobile-first a móvil, tableta y escritorio, sin desbordamiento horizontal.
 - Encabezado de marca y navegación, contenido principal y pie de página coherentes con el sitio.
 - Un bloque hero de campaña con imagen protagonista y llamada a la acción visual.
 - Secciones de **Novedades** y **Más vendidos**, presentadas como colecciones de tarjetas.
@@ -27,14 +27,14 @@ Este documento delimita la experiencia y sus criterios de aceptación. La implem
 
 - JavaScript, procesamiento de formularios, búsqueda funcional, cuenta de usuario, carrito, checkout, filtros o persistencia de datos.
 - Construcción de las páginas de Catálogo, Producto, Carrito o Checkout.
-- Servicios, bibliotecas, fuentes, imágenes o estilos cargados desde CDNs o dominios externos.
+- Servicios, bibliotecas, fuentes, imágenes o estilos remotos salvo el CDN oficial de Tailwind CSS v4 autorizado por `agent/AGENTS.md`.
 - Afirmar que la identidad ficticia inventada para la maqueta es la identidad oficial de una empresa real.
 - Inventar precios, disponibilidad, políticas, datos de contacto u otros hechos comerciales verificables.
 
 ## 3. Estructura y contenido
 
 1. **Encabezado:** identidad textual provisional de marca y navegación clara. Los accesos a otras áreas serán enlaces únicamente si existe un destino local definido; no se presentarán controles sin destino como si fueran funcionales.
-2. **Hero:** imagen de campaña local, titular breve en español y llamada a la acción visual. El texto no debe afirmar datos comerciales no confirmados.
+2. **Hero:** imagen de campaña local, titular breve en español y llamada a la acción visual. La imagen principal no debe cargarse de forma diferida y debe tener prioridad de descarga, dimensiones intrínsecas declaradas y precarga para favorecer el LCP. El texto no debe afirmar datos comerciales no confirmados.
 3. **Novedades:** colección estática de tarjetas con nombres demostrativos, visualmente fácil de explorar; el rótulo forma parte de la maqueta de empresa ficticia y no informa sobre un inventario real.
 4. **Más vendidos:** segunda colección estática de tarjetas con nombres demostrativos y jerarquía consistente con Novedades; el rótulo no afirma datos de ventas reales.
 5. **Pie de página global:** conservar la misma estructura y estilos al replicarlo en las páginas del sitio. Incluir marca y redes, enlaces de navegación, sección legal, contacto y señales de compra. La empresa ficticia y los datos demostrativos fueron autorizados por el usuario; las secciones legales usan disclosures nativos para explicar el carácter ficticio del contenido. El formulario de contacto es visual, está deshabilitado y no recoge ni envía información mientras no exista un endpoint real. Las formas de pago se nombran como categorías visuales, no como métodos aceptados y verificados.
@@ -52,20 +52,20 @@ Las 20 imágenes existentes en `IMG/` deben quedar integradas en la composición
 ## 5. Requisitos técnicos y de experiencia
 
 - HTML5 semántico, estructura de encabezados coherente y `lang="es"`.
-- Sin JavaScript, manejadores de eventos, frameworks de interfaz ni recursos remotos.
-- No depender de bibliotecas externas. No usar Tailwind mediante CDN; si se decide usar Tailwind, debe estar disponible localmente antes de implementarlo. La disponibilidad de CSS/Tailwind local no estaba configurada en la revisión.
-- Diseñar *mobile first*, sin desbordamiento horizontal. Las rejillas de contenido/productos usarán una columna en móvil, dos en tableta y cuatro en escritorio, según los requisitos del proyecto.
-- Navegación por teclado y foco visible; enlaces distinguibles; textos alternativos contextuales según el uso de cada imagen. Las imágenes puramente decorativas llevarán alternativa vacía.
-- Incluir título y descripción de página únicos y pertinentes. El marcado Schema.org de `Organization` y `WebSite` solo se incorporará durante la implementación si puede poblarse con información verificada y coincidente con el contenido visible.
-- La presentación debe sentirse terminada. No mostrar avisos de prototipo, datos de prueba o limitaciones técnicas.
+- Sin JavaScript de aplicación ni manejadores de eventos; solo se permite el script oficial de Tailwind CSS v4 para generar los estilos.
+- Priorizar utilidades Tailwind para toda la presentación, incluidos estados y breakpoints. Reservar CSS local para fuentes y tokens compartidos en la capa base.
+- Diseñar mobile-first, sin desbordamiento horizontal, con rejillas de una, dos y cuatro columnas en móvil, tableta y escritorio.
+- Mantener foco visible, navegación por teclado y alternativas contextuales para las imágenes informativas.
+- Incluir título y descripción pertinentes; incorporar Schema.org únicamente con datos verificados y coincidentes con el contenido visible.
+- Conservar la presentación terminada, sin avisos técnicos en la interfaz.
 
 ## 6. Criterios de aceptación
 
 - [x] Home presenta encabezado, hero, Novedades, Más vendidos y pie de página.
 - [x] La composición utiliza las 20 imágenes locales, cada una una sola vez, y sus alternativas se revisaron según el contexto.
 - [x] El contenido visible está en español; la identidad y las etiquetas son contenido demostrativo autorizado para la marca ficticia, sin datos comerciales factuales.
-- [x] La página es una maqueta estática: no requiere JavaScript ni promete completar acciones de tienda.
-- [x] No requiere recursos externos para su presentación.
+- [x] La página es una maqueta estática: no requiere JavaScript de aplicación ni promete completar acciones de tienda; Tailwind genera los estilos mediante su CDN autorizado.
+- [x] Usa el CDN oficial de Tailwind CSS v4 como única excepción remota autorizada por las instrucciones del proyecto; imágenes y fuentes permanecen locales.
 - [x] La estructura es semántica, el orden de encabezados es lógico y los enlaces tienen propósito comprensible.
 - [x] Se puede recorrer con teclado y el foco es visible; las imágenes informativas tienen alternativa contextual.
 - [x] La composición usa la retícula de 1/2/4 columnas en breakpoints CSS de `42rem` y `72rem` y se diseñó para evitar desbordamientos.
@@ -75,8 +75,8 @@ Las 20 imágenes existentes en `IMG/` deben quedar integradas en la composición
 ## 7. Hallazgos de la revisión y dependencias
 
 - `FUNCIONALIDADES/001-Home/Home.html` se completó como página estática semántica; enlaza `styles.css`.
-- `FUNCIONALIDADES/001-Home/styles.css` es la hoja local de Home y define las clases canónicas para el patrón de navbar/footer junto con los estilos de página.
-- El footer canónico usa las clases `site-footer`, `footer-main`, `footer-intro`, `footer-nav`, `footer-contact`, `footer-assurance`, `footer-legal-details` y `footer-bottom`; es mobile-first y sus columnas se amplían según viewport. Las páginas futuras deben replicar su estructura y enlazar esta hoja con la ruta relativa correcta.
+- `FUNCIONALIDADES/001-Home/styles.css` contiene exclusivamente las dos fuentes locales y los tokens compartidos en `@layer base`. La presentación, los estados de interacción y los breakpoints se expresan mediante utilidades Tailwind v4 en `Home.html`.
+- El footer canónico conserva las clases identificadoras `site-footer`, `footer-main`, `footer-intro`, `footer-nav`, `footer-contact`, `footer-assurance`, `footer-legal-details` y `footer-bottom`. Las páginas futuras deben copiar tanto su estructura como sus utilidades Tailwind, cargar el framework autorizado y enlazar la hoja de fuentes/tokens; las clases identificadoras por sí solas no aplican estilos.
 - Las 20 imágenes están documentadas en `IMG/textos-alternativos.md`; sus archivos viven en `IMG/`.
 - La fuente autorizada Old London está extraída en `FONTS/OldLondon.ttf`.
 - VHS Gothic se carga desde `FONTS/vhs_gothic/vhs-gothic.ttf`; conservar junto a ella `license.txt` y `readme.txt` al redistribuir.

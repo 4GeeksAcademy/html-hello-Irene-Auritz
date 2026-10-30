@@ -23,7 +23,7 @@ Durante la implementación de Home se deberá:
 5. Asegurar que el patrón funcione en diferentes contextos y tamaños de pantalla, no solo junto al hero de Home: evitar dependencias de dimensiones, fondos o posiciones exclusivas de esta página y comprobar su adaptación junto a distintos contenidos principales.
 6. Usar destinos válidos y consistentes para los enlaces. No presentar búsqueda, cuenta ni otros controles como funcionales si no tienen comportamiento implementado y aprobado.
 
-Como el sitio se ha definido como HTML estático sin JavaScript ni bibliotecas externas, el navegador no puede reutilizar por sí solo fragmentos HTML entre páginas. Por ello, antes de codificar se debe acordar cómo preservar una única convención sin introducir herramientas prohibidas: la opción compatible más sencilla es mantener el mismo bloque semántico de navbar/footer en cada HTML y compartir sus estilos en CSS local. Las páginas futuras deberán respetar exactamente ese contrato y actualizarse cuando cambie. No añadir un mecanismo de plantillas o procesamiento de servidor sin aprobación explícita.
+Como el sitio es HTML estático sin JavaScript de aplicación, la convención compartida consiste en copiar el mismo bloque semántico de navbar/footer junto con sus utilidades Tailwind en cada página. Cada HTML debe cargar el CDN oficial autorizado y la hoja local de fuentes/tokens. Las clases identificadoras no sustituyen esas utilidades. No añadir plantillas ni procesamiento de servidor sin aprobación explícita.
 
 La implementación de Home solo establecerá y aplicará el patrón global; **no implica implementar ni modificar las otras cuatro páginas**. La integración de ese patrón en cada página será parte del plan de su funcionalidad correspondiente.
 
@@ -33,7 +33,7 @@ La implementación de Home solo establecerá y aplicará el patrón global; **no
 
 - Confirmar la aprobación de `specs.md` y de este plan antes de escribir código.
 - Revisar la estructura existente de Home y las páginas vecinas para conocer convenciones y destinos locales, sin ampliar el alcance de Home ni modificar otras funcionalidades.
-- Resolver, antes de implementar, dónde vivirán los estilos compartidos para navbar/footer y cómo se referenciarán desde cada página; mantener recursos locales y evitar dependencias externas.
+- Mantener estilos globales locales para navbar/footer y detalles propios, pero expresar primero con Tailwind la composición, el layout, el espaciado y los breakpoints; usar únicamente el CDN oficial v4 permitido por `agent/AGENTS.md`.
 - Confirmar el contenido/destinos de navegación disponibles y qué elementos deben ser meramente visuales mientras no exista funcionalidad real.
 - Definir el inventario de las 20 imágenes y su distribución entre hero, Novedades y Más vendidos, tomando los nombres y alternativas de `IMG/textos-alternativos.md` como referencia.
 - Verificar los datos confirmados disponibles para la marca y decidir qué información puede aparecer en metadatos y Schema.org sin inventar datos.
@@ -56,7 +56,7 @@ La implementación de Home solo establecerá y aplicará el patrón global; **no
 
 ### Fase 4 — Estilos y adaptación
 
-- Implementar estilos locales y compartidos, evitando recursos remotos y dependencias no aprobadas.
+- Implementar con utilidades Tailwind los layouts y estilos que cubra el framework; reservar CSS local para estilos compartidos, fuentes y detalles editoriales específicos. No cargar recursos remotos excepto el CDN oficial v4 permitido.
 - Ajustar el diseño en enfoque *mobile first* y verificar navbar, hero, colecciones y footer en anchos móvil, tableta y escritorio.
 - Aplicar una, dos y cuatro columnas respectivamente a las rejillas de productos, cuando corresponda.
 - Comprobar contraste, legibilidad tipográfica, foco visible, navegación por teclado, nombres accesibles y ausencia de desbordamiento horizontal.

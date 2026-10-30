@@ -143,7 +143,7 @@ La regla de columnas aplica especialmente al catálogo y a colecciones de produc
 
 - Reutilizar los mismos tokens de color, escala tipográfica, espaciado, anchos, radios y estilos de foco en todo el sitio.
 - Preferir utilidades Tailwind y patrones repetibles; CSS adicional solo cuando Tailwind no resuelva claramente el caso. Sin estilos en línea innecesarios.
-- No introducir frameworks, CDNs ni otros recursos externos: el requisito del proyecto es que la interfaz funcione con recursos locales. Si Tailwind no está disponible localmente, resolver esa condición antes de depender de la CDN.
+- El CDN oficial de Tailwind CSS v4 (`https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4`) está autorizado por `agent/AGENTS.md`; no añadir otros frameworks, CDNs ni recursos externos. Mantener imágenes, fuentes, iconos y demás recursos locales.
 - Mantener encabezado, pie de página, botones, campos y tarjetas visualmente coherentes entre Inicio, Catálogo, Producto, Carrito y Checkout.
 - No presentar datos ficticios como reales. Para nombres oficiales, precios, IVA, disponibilidad, políticas, contacto y marca, solicitar los datos o señalarlos como contenido de demostración.
 
