@@ -1,6 +1,116 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth motion-reduce:scroll-auto">
 <head>
-  ...
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Checkout de NOIR ÉDITION: datos personales, dirección de entrega y método de pago en una sola página.">
+  <meta name="theme-color" content="#0c120c">
+  <title>Checkout — NOIR ÉDITION</title>
+  <link rel="stylesheet" href="../001-Home/styles.css">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
 </head>
+<body class="m-0 bg-[var(--color-paper)] font-[family-name:var(--font-body)] text-base leading-relaxed text-[var(--color-ink)] antialiased [&_a:focus-visible]:outline-3 [&_a:focus-visible]:outline-[var(--color-accent)] [&_a:focus-visible]:outline-offset-4 [&_input:not([type=radio])]:min-h-12 [&_input:not([type=radio])]:w-full [&_input:not([type=radio])]:rounded-none [&_input:not([type=radio])]:border [&_input:not([type=radio])]:border-[#6d7275] [&_input:not([type=radio])]:bg-transparent [&_input:not([type=radio])]:px-3 [&_input:not([type=radio])]:py-2 [&_input:focus-visible]:outline-3 [&_input:focus-visible]:outline-[var(--color-accent)] [&_input:focus-visible]:outline-offset-2">
+  <a class="fixed top-3 left-3 z-20 -translate-y-[160%] bg-[var(--color-paper)] px-4 py-3 font-bold underline focus:translate-y-0" href="#contenido">Saltar al contenido principal</a>
+  <header class="relative grid grid-cols-[1fr_auto] items-center gap-x-8 gap-y-5 border-b border-[#0c120c]/20 px-[var(--page-gutter)] py-[1.15rem] min-[42rem]:grid-cols-[auto_1fr_auto] min-[72rem]:min-h-[5.5rem] min-[72rem]:py-5">
+    <a class="w-fit font-[family-name:var(--font-display)] text-[1.75rem] leading-none tracking-[0.025em] no-underline" href="../001-Home/Home.html" aria-label="NOIR ÉDITION — Inicio">NOIR ÉDITION</a>
+    <nav class="col-span-full row-start-2 flex flex-wrap items-center gap-x-[1.35rem] gap-y-3 min-[42rem]:col-span-1 min-[42rem]:row-start-auto min-[42rem]:justify-center [&_a]:font-[family-name:var(--font-accent)] [&_a]:text-xs [&_a]:tracking-[0.105em] [&_a]:no-underline [&_a]:uppercase [&_a:hover]:underline [&_a:hover]:decoration-[var(--color-accent)] [&_a]:underline-offset-8" aria-label="Navegación principal">
+      <a href="../001-Home/Home.html">Inicio</a><a href="../002-Catalogo/Catalogo.html">Catálogo</a><a href="../003-Vista-producto/Producto.html">Producto</a><a href="../004-Carrito/Carrito.html">Carrito</a><a href="Checkout.html" aria-current="page" class="underline! decoration-[var(--color-accent)] decoration-2">Checkout</a>
+    </nav>
+    <p class="m-0 hidden text-right font-[family-name:var(--font-accent)] text-[0.68rem] tracking-[0.12em] text-[#454a47] uppercase min-[42rem]:block">París · Estudio de formas</p>
+  </header>
+
+  <main id="contenido" class="mx-auto w-full max-w-[100rem] px-[var(--page-gutter)] pt-8 pb-16 min-[42rem]:pt-12 min-[72rem]:pb-24">
+    <a class="inline-flex min-h-11 items-center gap-2 text-sm underline underline-offset-4 hover:text-[var(--color-accent)]" href="../004-Carrito/Carrito.html"><span aria-hidden="true">←</span> Volver al carrito</a>
+    <h1 class="mt-6 mb-8 font-[family-name:var(--font-display)] text-5xl font-normal leading-tight min-[42rem]:text-6xl">Checkout</h1>
+    <nav class="border-y border-[#0c120c]/25 py-5" aria-label="Secciones del checkout">
+      <ol class="m-0 grid list-none grid-cols-3 gap-3 p-0 text-xs min-[42rem]:text-sm">
+        <li><a href="#datos-personales" class="flex min-h-11 flex-col gap-2 underline underline-offset-4 min-[42rem]:flex-row min-[42rem]:items-center min-[42rem]:gap-3"><span class="grid size-8 shrink-0 place-items-center border border-[#6d7275]" aria-hidden="true">01</span><span>Datos personales</span></a></li>
+        <li><a href="#direccion-entrega" class="flex min-h-11 flex-col gap-2 underline underline-offset-4 min-[42rem]:flex-row min-[42rem]:items-center min-[42rem]:gap-3"><span class="grid size-8 shrink-0 place-items-center border border-[#6d7275]" aria-hidden="true">02</span><span>Dirección de entrega</span></a></li>
+        <li><a href="#pago" class="flex min-h-11 flex-col gap-2 underline underline-offset-4 min-[42rem]:flex-row min-[42rem]:items-center min-[42rem]:gap-3"><span class="grid size-8 shrink-0 place-items-center border border-[#6d7275]" aria-hidden="true">03</span><span>Pago</span></a></li>
+      </ol>
+    </nav>
+
+    <div class="mt-10 grid items-start gap-12 min-[72rem]:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)] min-[72rem]:gap-20">
+      <div class="min-w-0 [&>section]:hidden [&>section:target]:block [&:not(:has(>section:target))>#datos-personales]:block [&_section]:scroll-mt-8 [&_section:focus-visible]:outline-3 [&_section:focus-visible]:outline-[var(--color-accent)] [&_section:focus-visible]:outline-offset-4">
+      <section id="datos-personales" aria-labelledby="datos-titulo" tabindex="-1">
+        <p class="m-0 text-xs font-bold tracking-[0.15em] uppercase">01 / Contacto</p>
+        <h2 id="datos-titulo" class="mt-3 mb-6 font-[family-name:var(--font-accent)] text-2xl font-normal leading-tight">Datos personales</h2>
+        <fieldset class="m-0 min-w-0 border-0 p-0">
+          <legend class="mb-6 text-lg font-bold">Datos de contacto</legend>
+          <div class="grid gap-6 min-[42rem]:grid-cols-2">
+            <div class="grid gap-2"><label for="nombre" class="text-sm font-bold">Nombre</label><input id="nombre" type="text" autocomplete="off"></div>
+            <div class="grid gap-2"><label for="apellidos" class="text-sm font-bold">Apellidos</label><input id="apellidos" type="text" autocomplete="off"></div>
+            <div class="grid gap-2 min-[42rem]:col-span-2"><label for="correo" class="text-sm font-bold">Correo electrónico</label><input id="correo" type="email" autocomplete="off"></div>
+            <div class="grid gap-2 min-[42rem]:col-span-2"><label for="telefono" class="text-sm font-bold">Teléfono</label><input id="telefono" type="tel" autocomplete="off"></div>
+          </div>
+        </fieldset>
+        <div class="mt-10 border-t border-[#0c120c]/25 pt-6">
+          <a class="inline-flex min-h-12 w-full items-center justify-between gap-4 bg-[var(--color-accent)] px-5 py-3 text-sm font-bold text-[var(--color-paper)] no-underline hover:bg-[var(--color-ink)] min-[42rem]:w-auto min-[42rem]:min-w-72" href="#direccion-entrega">Continuar a la dirección <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+      <section id="direccion-entrega" aria-labelledby="direccion-titulo" tabindex="-1">
+        <p class="m-0 text-xs font-bold tracking-[0.15em] uppercase">02 / Destino</p>
+        <h2 id="direccion-titulo" class="mt-3 mb-6 font-[family-name:var(--font-accent)] text-2xl font-normal leading-tight">Dirección de entrega</h2>
+        <fieldset class="m-0 min-w-0 border-0 p-0">
+          <legend class="mb-6 text-lg font-bold">Dirección de destino</legend>
+          <div class="grid gap-6 min-[42rem]:grid-cols-2">
+            <div class="grid gap-2 min-[42rem]:col-span-2"><label for="direccion" class="text-sm font-bold">Dirección</label><input id="direccion" type="text" autocomplete="off"></div>
+            <div class="grid gap-2 min-[42rem]:col-span-2"><label for="complemento" class="text-sm font-bold">Piso, puerta u otros detalles</label><input id="complemento" type="text" autocomplete="off"></div>
+            <div class="grid gap-2"><label for="ciudad" class="text-sm font-bold">Ciudad</label><input id="ciudad" type="text" autocomplete="off"></div>
+            <div class="grid gap-2"><label for="codigo-postal" class="text-sm font-bold">Código postal</label><input id="codigo-postal" type="text" autocomplete="off"></div>
+            <div class="grid gap-2"><label for="region" class="text-sm font-bold">Provincia o región</label><input id="region" type="text" autocomplete="off"></div>
+            <div class="grid gap-2"><label for="pais" class="text-sm font-bold">País</label><input id="pais" type="text" autocomplete="off"></div>
+          </div>
+        </fieldset>
+        <div class="mt-8 flex flex-wrap items-center justify-between gap-5">
+          <a href="#datos-personales" class="inline-flex min-h-11 items-center text-sm underline underline-offset-4">Volver a datos personales</a>
+          <a href="#pago" class="inline-flex min-h-12 w-full items-center justify-between gap-4 bg-[var(--color-accent)] px-5 py-3 text-sm font-bold text-[var(--color-paper)] no-underline hover:bg-[var(--color-ink)] min-[42rem]:w-auto min-[42rem]:min-w-56">Continuar al pago <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+      <section id="pago" aria-labelledby="pago-titulo" tabindex="-1">
+        <p class="m-0 text-xs font-bold tracking-[0.15em] uppercase">03 / Pago</p>
+        <h2 id="pago-titulo" class="mt-3 mb-6 font-[family-name:var(--font-accent)] text-2xl font-normal leading-tight">Pago</h2>
+        <fieldset class="m-0 min-w-0 border-0 p-0">
+          <legend class="mb-6 text-lg font-bold">Método de pago</legend>
+          <div class="grid gap-4">
+            <label for="tarjeta" class="flex min-h-20 cursor-pointer items-center gap-4 border border-[#6d7275] px-5 py-4 hover:bg-[var(--color-surface)] has-checked:bg-[var(--color-surface)] has-checked:ring-1 has-checked:ring-[var(--color-ink)]"><input id="tarjeta" type="radio" name="metodo" value="tarjeta" class="size-5 shrink-0 accent-[var(--color-ink)]"><span class="text-sm font-bold">Tarjeta bancaria</span></label>
+            <label for="billetera" class="flex min-h-20 cursor-pointer items-center gap-4 border border-[#6d7275] px-5 py-4 hover:bg-[var(--color-surface)] has-checked:bg-[var(--color-surface)] has-checked:ring-1 has-checked:ring-[var(--color-ink)]"><input id="billetera" type="radio" name="metodo" value="billetera" class="size-5 shrink-0 accent-[var(--color-ink)]"><span class="text-sm font-bold">Billetera digital</span></label>
+            <label for="transferencia" class="flex min-h-20 cursor-pointer items-center gap-4 border border-[#6d7275] px-5 py-4 hover:bg-[var(--color-surface)] has-checked:bg-[var(--color-surface)] has-checked:ring-1 has-checked:ring-[var(--color-ink)]"><input id="transferencia" type="radio" name="metodo" value="transferencia" class="size-5 shrink-0 accent-[var(--color-ink)]"><span class="text-sm font-bold">Transferencia bancaria</span></label>
+          </div>
+        </fieldset>
+        <div class="mt-8 flex flex-wrap items-center justify-between gap-5">
+          <a href="#direccion-entrega" class="inline-flex min-h-11 items-center text-sm underline underline-offset-4">Volver a la dirección</a>
+          <button type="button" commandfor="confirmacion-pedido" command="show-modal" class="inline-flex min-h-12 w-full cursor-pointer items-center justify-center bg-[var(--color-accent)] px-6 py-3 text-sm font-bold text-[var(--color-paper)] hover:bg-[var(--color-ink)] focus-visible:outline-3 focus-visible:outline-[var(--color-accent)] focus-visible:outline-offset-4 min-[42rem]:w-auto">Confirmar pago</button>
+        </div>
+        <div class="mt-8 border-t border-[#0c120c]/25 pt-6">
+          <h3 class="mt-0 mb-4 text-lg font-bold">Continuar explorando</h3>
+          <div class="flex flex-wrap gap-6 text-sm [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center [&_a]:underline [&_a]:underline-offset-4"><a href="../004-Carrito/Carrito.html">Volver al carrito</a><a href="../002-Catalogo/Catalogo.html">Ver catálogo <span class="ml-2" aria-hidden="true">→</span></a></div>
+        </div>
+      </section>
+      </div>
+      <aside aria-label="Selección editorial" class="min-w-0 border-t border-[#0c120c]/25 pt-5 min-[72rem]:mt-1">
+        <p class="mt-0 mb-4 text-xs tracking-[0.15em] uppercase">NOIR ÉDITION / Estudio visual</p>
+        <img src="../../IMG/CHAQUETA.jpg" alt="Vista posterior de una chaqueta oscura con bordados en relieve y cierres metálicos." class="aspect-[4/3] w-full object-cover min-[72rem]:aspect-[4/5]" width="800" height="1000" decoding="async">
+        <p class="mt-4 mb-0 font-[family-name:var(--font-display)] text-3xl leading-tight">Formas con carácter.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="bg-[var(--color-ink)] px-[var(--page-gutter)] pt-12 pb-5 text-[var(--color-paper)] [&_a:focus-visible]:outline-[var(--color-paper)] [&_a:hover]:underline [&_a]:underline-offset-4">
+    <div class="mx-auto grid max-w-[100rem] gap-10 pb-10 min-[42rem]:grid-cols-2 min-[72rem]:grid-cols-[1.2fr_0.75fr_0.9fr_1.35fr] [&_h2]:mt-0 [&_h2]:mb-4 [&_h2]:text-xs [&_h2]:font-bold [&_h2]:tracking-[0.14em] [&_h2]:uppercase">
+      <div><a href="../001-Home/Home.html" class="font-[family-name:var(--font-display)] text-4xl no-underline">NOIR ÉDITION</a><p class="max-w-72 text-sm text-[#e0e0df]">Una exploración de la forma urbana, el gesto y la materia.</p><nav aria-label="Redes sociales" class="flex flex-wrap gap-4 text-sm"><a href="https://www.instagram.com/">Instagram</a><a href="https://www.pinterest.com/">Pinterest</a><a href="https://www.tiktok.com/">TikTok</a></nav></div>
+      <nav aria-label="Explorar la tienda" class="flex flex-col items-start gap-2 text-sm"><h2>Explorar</h2><a href="../001-Home/Home.html">Inicio</a><a href="../002-Catalogo/Catalogo.html">Catálogo</a><a href="../003-Vista-producto/Producto.html">Producto</a><a href="../004-Carrito/Carrito.html">Carrito</a><a href="Checkout.html">Checkout</a></nav>
+      <nav aria-label="Información legal y ayuda" class="flex flex-col items-start gap-2 text-sm"><h2>Información</h2><a href="../001-Home/Home.html#footer-legal">Aviso legal</a><a href="../001-Home/Home.html#footer-privacy">Política de privacidad</a><a href="../001-Home/Home.html#footer-cookies">Política de cookies</a></nav>
+      <section aria-labelledby="contacto"><h2 id="contacto">Estamos cerca</h2><address class="grid gap-3 text-sm text-[#e0e0df] not-italic"><span>12, rue des Silhouettes, 75003 París, Francia</span><a href="tel:+33100000000">+33 1 00 00 00 00</a><span class="break-all">bonjour@noiredition.example</span></address></section>
+    </div>
+    <div class="mx-auto flex max-w-[100rem] flex-wrap justify-between gap-4 border-t border-[#ecebf3]/30 pt-4 text-xs text-[#e0e0df]"><p class="m-0">© NOIR ÉDITION</p><a href="#contenido">Volver arriba <span aria-hidden="true">↑</span></a></div>
+  </footer>
+  <dialog id="confirmacion-pedido" closedby="none" aria-labelledby="confirmacion-titulo" aria-describedby="confirmacion-mensaje" class="m-auto max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-lg overflow-y-auto rounded-none border border-[var(--color-ink)] bg-[var(--color-paper)] p-6 text-[var(--color-ink)] shadow-xl backdrop:bg-[#0c120c]/45 backdrop:backdrop-blur-sm min-[42rem]:p-10">
+    <a href="../001-Home/Home.html" aria-label="Cerrar confirmación y volver a Inicio" autofocus class="ml-auto flex size-11 items-center justify-center text-3xl leading-none no-underline hover:bg-[var(--color-surface)]"><span aria-hidden="true">×</span></a>
+    <p class="mt-4 mb-3 text-xs tracking-[0.12em] uppercase">NOIR ÉDITION</p>
+    <h2 id="confirmacion-titulo" class="mt-0 mb-5 font-[family-name:var(--font-accent)] text-2xl font-normal leading-snug min-[42rem]:text-3xl">¡Gracias por tu pedido!</h2>
+    <p id="confirmacion-mensaje" class="mt-0 mb-8 text-base leading-relaxed">Gracias por compartir nuestra forma de mirar la moda. Nos alegra que formes parte del universo NOIR ÉDITION.</p>
+    <a href="../001-Home/Home.html" class="inline-flex min-h-12 w-full items-center justify-center bg-[var(--color-ink)] px-5 py-3 text-sm font-bold text-[var(--color-paper)] no-underline hover:bg-[var(--color-accent)]">Volver al inicio</a>
+  </dialog>
+</body>
+</html>
