@@ -13,7 +13,7 @@ Cada tarea reúne un resultado coherente y comprobable, preservando suficiente c
 
 - [x] **A1. Revisar y aprobar los artefactos SDD de Home.** Confirmado al iniciar la implementación por instrucción del usuario: `specs.md` y `plan.md` describen el alcance estático, los criterios de aceptación y la relación entre el patrón global de navbar/footer y Home.
 - [x] **A2. Inspeccionar la estructura y los destinos disponibles.** Revisados `Home.html`, los cuatro HTML vecinos y los recursos del proyecto. Las otras páginas son placeholders, pero sus rutas locales están definidas; no se modifican en esta funcionalidad. No hay CSS ni Tailwind configurado localmente.
-- [x] **A3. Resolver la estrategia de estilos compartidos.** La hoja canónica de navbar/footer residirá en `FUNCIONALIDADES/001-Home/styles.css`, enlazada desde Home y disponible para que las páginas futuras la referencien con rutas relativas. Se usará CSS local sin CDN, JavaScript ni bibliotecas externas.
+- [x] **A3. Resolver la estrategia de estilos compartidos.** Los layouts principales y breakpoints de Home se expresan mediante utilidades Tailwind CSS v4 cargadas desde el CDN oficial autorizado por `agent/AGENTS.md`. `styles.css` conserva fuentes locales, tokens, estilos globales y detalles editoriales no cubiertos razonablemente por utilidades; no se añade JavaScript de aplicación.
 - [x] **A4. Cerrar contenido y decisiones visuales necesarias para Home.** Por indicación del usuario, la marca es ficticia y se puede inventar su nombre y textos editoriales. Se usa «NOIR ÉDITION» como identidad de maqueta y los títulos «Novedades» y «Más vendidos», definidos para Home. `FULL.jpg` será el hero y las otras 19 imágenes se repartirán entre ambas colecciones, sin repetir archivos; las etiquetas y alternativas seguirán `IMG/textos-alternativos.md`. Se usará Old London, cuyo uso autorizó el usuario, y una sans serif de sistema legible para lectura; no se empleará VHS Gothic en párrafos ni controles.
 
 ## B. Contrato de componentes globales
@@ -32,7 +32,7 @@ Cada tarea reúne un resultado coherente y comprobable, preservando suficiente c
 
 ## D. Estilos y adaptación
 
-- [x] **D1. Implementar estilos locales para Home y sus componentes globales.** `styles.css` define estilos locales para navbar, footer, hero y colecciones; los estilos compartidos usan clases canónicas y no requieren recursos remotos. No se modifican las otras páginas; estas podrán enlazar esta hoja al implementarse.
+- [x] **D1. Priorizar Tailwind y reducir CSS duplicado.** Las utilidades Tailwind definen toda la presentación de Home, incluidos tarjetas, footer, tipografía, hover/foco, formulario deshabilitado y movimiento reducido. `styles.css` conserva solo dos declaraciones de fuentes locales y tokens compartidos en la capa base. Las páginas futuras deben reutilizar estructura y utilidades, no solo nombres de clase. El CDN oficial de Tailwind v4 es la única dependencia remota añadida.
 - [x] **D2. Adaptar la composición a móvil, tableta y escritorio.** CSS mobile-first: rejilla de 1 columna, 2 columnas desde `42rem` y 4 desde `72rem`; navegación y cabeceras se envuelven en pantallas estrechas, y el footer cambia de disposición por breakpoint. No se fijan anchos mínimos en las tarjetas.
 - [x] **D3. Asegurar legibilidad, accesibilidad visual y uso por teclado.** Se midió contraste de combinaciones de texto; en el footer nuevo: papel/tinta 16.02:1, gris claro/tinta 14.35:1, papel/fondo de campos 14.12:1 y gris claro/fondo de campos 12.65:1. Los enlaces tienen señal hover y foco visible; el formulario tiene etiquetas y fieldset accesible, pero permanece deshabilitado sin endpoint. Se mantiene el skip link y `prefers-reduced-motion`.
 
@@ -41,7 +41,13 @@ Cada tarea reúne un resultado coherente y comprobable, preservando suficiente c
 - [x] **E1. Validar comportamiento estático y enlaces.** Confirmado: sin JavaScript ni dependencias externas, y el formulario queda deshabilitado hasta tener endpoint; enlaces locales apuntan a destinos existentes, los fragmentos legales resuelven y las redes apuntan a páginas oficiales. Las páginas destino siguen siendo placeholders fuera de alcance.
 - [x] **E2. Revisar estructura, contenido y recursos.** `lang="es"`, un H1, jerarquía de encabezados, metadatos y rutas locales comprobados; parser HTML estándar sin errores estructurales, 20 imágenes con `alt` y sin duplicados ni omisiones, destino del skip link resuelto. No hay Schema.org inventado.
 - [x] **E3. Verificar criterios de aceptación y contrato global.** Home incluye encabezado y footer con contrato documentado, secciones organizadas con columnas responsive, navegación/labels accesibles, contenido de contacto ficticio autorizado y formulario inactivo. No se declaran certificaciones ni pagos aceptados. Catálogo, Producto, Carrito y Checkout quedan pendientes de integrar el patrón en sus funcionalidades; no se modificaron.
-- [x] **E4. Actualizar artefactos SDD si cambió el alcance.** `specs.md` y `plan.md` reflejan el estado implementado, la identidad ficticia autorizada, el uso local de Old London y los pendientes de las otras páginas; Home no añadió funcionalidades de tienda.
+- [x] **E4. Actualizar artefactos SDD si cambió el alcance.** `specs.md`, `plan.md` y `tasks.md` reflejan la estrategia Tailwind, la identidad ficticia autorizada, el uso local de Old London y los pendientes de las otras páginas; Home no añadió funcionalidades de tienda.
+
+## Revisión de la migración a Tailwind
+
+- Comprobados con el parser HTML estándar: un H1, 20 imágenes únicas con alternativas, anclas válidas, rutas locales existentes y solo el script Tailwind autorizado.
+- Sin errores detectados por el editor en HTML/CSS. Hoja local reducida a 32 líneas de fuentes y tokens; se conservan los valores visuales y breakpoints anteriores.
+- Pendiente la comprobación visual en navegador y la compilación real de las utilidades; se omitió la instalación de las herramientas propuestas para esa verificación.
 
 ## Dependencias y límites
 
