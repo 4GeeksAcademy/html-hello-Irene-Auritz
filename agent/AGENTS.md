@@ -10,8 +10,8 @@ Estas instrucciones deben aplicarse al crear o modificar archivos del proyecto. 
 
 - Escribir HTML5 semántico y utilizar los elementos según su propósito: `header`, `nav`, `main`, `section`, `article`, `aside`, `form` y `footer`, cuando correspondan.
 - No utilizar JavaScript en ninguna forma: no añadir código inline, archivos `.js`, scripts externos, manejadores de eventos ni frameworks o bibliotecas JavaScript. Construir la experiencia con HTML y CSS.
-- Priorizar Tailwind CSS para los estilos. No introducir frameworks de interfaz.
-- No cargar recursos ajenos al proyecto: evitar imágenes, scripts, hojas de estilo, bibliotecas y fuentes remotas, incluidos CDNs. Utilizar recursos locales existentes. Si Tailwind aún no está disponible localmente, no añadir un CDN por conveniencia; informar de la necesidad de resolver su configuración local antes de depender de él.
+- Priorizar Tailwind CSS para los estilos de todas las funcionalidades: implementar la composición y los detalles visuales mediante sus utilidades antes que mediante hojas CSS locales. Reducir el CSS local al mínimo imprescindible y añadir reglas propias solo cuando Tailwind no cubra razonablemente el caso o cuando formen parte de estilos globales compartidos; evitar duplicar en CSS estilos que ya puedan expresarse con utilidades. Se autoriza cargar Tailwind CSS v4 mediante su CDN oficial (`https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4`) en las páginas que lo utilicen; esta excepción prevalece sobre la prohibición general de recursos externos indicada en el resto de estas instrucciones y en documentos anteriores del proyecto. También se puede usar una instalación local de Tailwind si está configurada. No introducir otros frameworks de interfaz.
+- No cargar recursos ajenos al proyecto salvo la excepción explícita de Tailwind CSS v4 descrita arriba. Para imágenes, fuentes, iconos, bibliotecas y cualquier otro script/hoja de estilo, utilizar recursos locales; no añadir otros CDNs o dependencias remotas.
 - Mantener el prototipo ligero y evitar dependencias innecesarias.
 
 ## Ramas de funcionalidad
@@ -65,5 +65,6 @@ La accesibilidad debe reflejarse en las decisiones de diseño y en la implementa
 
 - Mantener consistentes la navegación, el pie de página, la tipografía, los colores, los espacios y los componentes compartidos entre páginas.
 - Respetar la guía de marca acordada en `agent/DESIGN.md` y la paleta documentada allí; no introducir una identidad o recursos gráficos nuevos sin aprobación.
+- La prioridad de Tailwind y la reducción del CSS local no deben alterar el diseño acordado: preservar la consistencia de cada página con las instrucciones, la guía visual y las decisiones documentadas en `agent/`.
 - Preferir los archivos locales de `IMG/` y sus descripciones registradas. No depender de servicios externos para que una página se vea o funcione.
 - Si un requisito es ambiguo o faltan datos necesarios para una decisión de diseño o contenido, documentar la duda y solicitar definición en lugar de asumir.
