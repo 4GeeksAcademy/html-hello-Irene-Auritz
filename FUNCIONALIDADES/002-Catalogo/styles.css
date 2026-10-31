@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "Old London";
+  src: url("../../FONTS/OldLondon.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "VHS Gothic";
+  src: url("../../FONTS/vhs_gothic/vhs-gothic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --color-ink: #0c120c;
+    --color-muted: #6d7275;
+    --color-accent: #c20114;
+    --color-surface: #c7d6d5;
+    --color-paper: #ecebf3;
+    --color-white: #fff;
+    --font-display: "Old London", Georgia, serif;
+    --font-accent: "VHS Gothic", sans-serif;
+    --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --page-gutter: clamp(1.25rem, 5vw, 5.5rem);
+    --content-width: 100rem;
+  }
+
+  /* Clase para ocultar elementos visualmente pero mantenerlos accesibles (sr-only) */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /* Clase para el eyebrow (etiqueta pequeña sobre títulos) */
+  .eyebrow {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0.85rem;
+    font-family: var(--font-accent);
+    font-size: 0.68rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+}
