@@ -28,6 +28,15 @@
     --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --page-gutter: clamp(1.25rem, 5vw, 5.5rem);
     --content-width: 100rem;
+    --type-h1: clamp(2.2rem, 6vw, 4.5rem);
+    --type-h2: clamp(1.25rem, 2.5vw, 1.5rem);
+    --type-h3: 1rem;
+    --type-h4: 0.875rem;
+    --type-control: 1rem;
+    --type-body: 1rem;
+    --type-lead: 1.125rem;
+    --type-small: 0.875rem;
+    --type-caption: 0.75rem;
   }
 
   /* Clase para ocultar elementos visualmente pero mantenerlos accesibles (sr-only) */
@@ -49,10 +58,83 @@
     margin-top: 0;
     margin-bottom: 0.85rem;
     font-family: var(--font-accent);
-    font-size: 0.68rem;
+    font-size: var(--type-caption);
     font-weight: bold;
     letter-spacing: 0.2em;
     line-height: 1.4;
     text-transform: uppercase;
+  }
+
+  .filter-chevron {
+    transition: transform 160ms ease;
+  }
+
+  .filter-trigger::-webkit-details-marker {
+    display: none;
+  }
+
+  .filter-trigger::marker {
+    content: "";
+  }
+
+  .filter-dropdown[open] .filter-chevron {
+    transform: rotate(180deg);
+  }
+
+  .filter-dropdown:focus-within .filter-trigger {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 4px;
+  }
+
+  .filter-option-label:focus-within {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  .product-card {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto auto;
+    gap: 0.35rem;
+    min-width: 0;
+    aspect-ratio: 1;
+    overflow: hidden;
+    padding: clamp(0.65rem, 1.5vw, 1rem);
+    border: 2px solid var(--color-accent);
+    background-color: color-mix(in srgb, var(--color-surface) 30%, transparent);
+  }
+
+  .product-image-link {
+    display: block;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .product-image-link img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .product-caption h3,
+  .product-caption p,
+  .product-card > p {
+    margin: 0;
+  }
+
+  .product-caption h3 {
+    line-height: 1.25;
+  }
+
+  .product-caption h3 a {
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+
+  .product-caption h3 a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
   }
 }

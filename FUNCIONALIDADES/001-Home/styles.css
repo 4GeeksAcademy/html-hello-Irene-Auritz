@@ -28,5 +28,14 @@
     --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --page-gutter: clamp(1.25rem, 5vw, 5.5rem);
     --content-width: 100rem;
+    --type-h1: clamp(2.2rem, 6vw, 4.5rem);
+    --type-h2: clamp(1.25rem, 2.5vw, 1.5rem);
+    --type-h3: 1rem;
+    --type-h4: 0.875rem;
+    --type-control: 1rem;
+    --type-body: 1rem;
+    --type-lead: 1.125rem;
+    --type-small: 0.875rem;
+    --type-caption: 0.75rem;
   }
 }
