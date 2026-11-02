@@ -25,20 +25,16 @@
   <!-- HEADER: Marca y navegación -->
   <header class="site-header relative z-[2] grid grid-cols-[1fr_auto] items-center gap-x-8 gap-y-5 border-b border-[rgb(12_18_12_/_14%)] bg-[#ecebf3] px-[var(--page-gutter)] py-[1.15rem] min-[42rem]:grid-cols-[auto_1fr_auto] min-[72rem]:min-h-[5.5rem] min-[72rem]:py-5">
     
-    <!-- Logo/Marca -->
-    <a class="site-brand w-fit font-[family-name:var(--font-display)] text-[1.75rem] leading-none tracking-[0.025em] no-underline" href="../001-Home/Home.html" aria-label="Ir al inicio">NOIR ÉDITION</a>
-    
-    <!-- Navegación principal -->
-    <nav class="site-nav col-span-full row-start-2 flex flex-wrap items-center gap-x-[1.35rem] gap-y-[0.55rem] min-[42rem]:col-span-1 min-[42rem]:row-start-auto min-[42rem]:justify-center min-[42rem]:gap-x-4 min-[42rem]:gap-y-3 min-[72rem]:gap-[1.4rem] [&_a]:w-fit [&_a]:font-[family-name:var(--font-accent)] [&_a]:text-xs [&_a]:font-normal [&_a]:tracking-[0.105em] [&_a]:leading-[1.4] [&_a]:no-underline [&_a]:uppercase min-[42rem]:[&_a]:text-[0.68rem] min-[72rem]:[&_a]:text-[0.72rem] [&_a:hover]:text-[var(--color-accent)] [&_a:hover]:underline [&_a:hover]:decoration-[var(--color-accent)] [&_a:hover]:decoration-2 [&_a:hover]:underline-offset-[0.3em] [&_a[aria-current=page]]:underline [&_a[aria-current=page]]:decoration-[var(--color-accent)] [&_a[aria-current=page]]:decoration-2 [&_a[aria-current=page]]:underline-offset-[0.4rem]" aria-label="Navegación principal">
+    <a class="site-brand w-fit font-[family-name:var(--font-display)] text-[1.75rem] leading-none tracking-[0.025em] no-underline" href="../001-Home/Home.html" aria-label="NOIR ÉDITION — Inicio">NOIR ÉDITION</a>
+    <nav class="site-nav col-span-full row-start-2 flex flex-wrap items-center gap-x-[1.35rem] gap-y-[0.55rem] min-[42rem]:col-span-1 min-[42rem]:row-start-auto min-[42rem]:justify-center min-[42rem]:gap-x-4 min-[42rem]:gap-y-3 min-[72rem]:gap-[1.4rem] [&_a]:w-fit [&_a]:font-[family-name:var(--font-accent)] [&_a]:text-xs [&_a]:font-normal [&_a]:tracking-[0.105em] [&_a]:leading-[1.4] [&_a]:no-underline [&_a]:uppercase min-[42rem]:[&_a]:text-[length:var(--type-caption)] min-[72rem]:[&_a]:text-[length:var(--type-caption)] [&_a:hover]:text-[var(--color-accent)] [&_a:hover]:underline [&_a:hover]:decoration-[var(--color-accent)] [&_a:hover]:decoration-2 [&_a:hover]:underline-offset-[0.3em] [&_a[aria-current=page]]:underline [&_a[aria-current=page]]:decoration-[var(--color-accent)] [&_a[aria-current=page]]:decoration-2 [&_a[aria-current=page]]:underline-offset-[0.4rem]" aria-label="Navegación principal">
       <a href="../001-Home/Home.html">Inicio</a>
       <a href="Catalogo.html" aria-current="page">Catálogo</a>
-      <a href="../003-Vista-producto/product.html">Producto</a>
+      <a href="../003-Vista-producto/Producto.html">Producto</a>
       <a href="../004-Carrito/Carrito.html">Carrito</a>
       <a href="../005-Checkout/Checkout.html">Checkout</a>
     </nav>
     
-    <!-- Nota en header -->
-    <p class="header-note m-0 hidden justify-self-end font-[family-name:var(--font-accent)] text-[0.68rem] tracking-[0.12em] text-right text-[#454a47] uppercase min-[42rem]:block">París · Estudio de formas</p>
+    <p class="header-note m-0 hidden justify-self-end font-[family-name:var(--font-accent)] text-[length:var(--type-caption)] tracking-[0.12em] text-right text-[#454a47] uppercase min-[42rem]:block">París · Estudio de formas</p>
   </header>
 
   <!-- CONTENIDO PRINCIPAL -->
@@ -47,28 +43,32 @@
     <!-- Sección de título del catálogo -->
     <section class="catalog-intro mb-[clamp(3rem,6vw,6rem)]" aria-labelledby="catalog-title">
       <div class="flex flex-col gap-4">
-        <p class="eyebrow m-0 mb-[0.85rem] font-[family-name:var(--font-accent)] text-[0.68rem] font-bold tracking-[0.2em] leading-[1.4] uppercase">Colección Completa</p>
-        <h1 id="catalog-title" class="m-0 font-[family-name:var(--font-display)] text-[clamp(2.2rem,6vw,4.5rem)] font-normal leading-[1.1] tracking-[0.01em]">Nuestro Catálogo</h1>
+        <p class="eyebrow m-0 mb-[0.85rem] font-[family-name:var(--font-accent)] text-[length:var(--type-caption)] font-bold tracking-[0.2em] leading-[1.4] uppercase">Colección Completa</p>
+        <h1 id="catalog-title" class="m-0 font-[family-name:var(--font-display)] font-normal leading-[1.1] tracking-[0.01em] text-[length:var(--type-h1)]">Nuestro Catálogo</h1>
         <p class="mt-4 max-w-2xl text-[1rem] text-[#454a47] leading-[1.6]">Descubre nuestra selección editorial de prendas urbanas. Cada pieza ha sido cuidadosamente seleccionada para ofrecer siluetas expresivas y detalles únicos.</p>
       </div>
     </section>
 
     <!-- SECCIÓN DE FILTROS -->
     <section class="filters-section mb-[clamp(3rem,6vw,5rem)] border-b border-[rgb(12_18_12_/_14%)] pb-8" aria-labelledby="filters-title">
-      <h2 id="filters-title" class="m-0 mb-6 font-[family-name:var(--font-display)] text-[1.3rem] font-normal tracking-[0.01em]">Filtrar por</h2>
+      <h2 id="filters-title" class="m-0 mb-6 font-[family-name:var(--font-display)] font-normal tracking-[0.01em] text-[length:var(--type-h2)]">Filtrar por</h2>
       
       <!-- Contenedor de filtros responsive -->
-      <div class="filters-container grid grid-cols-1 gap-8 min-[42rem]:grid-cols-2 min-[72rem]:grid-cols-2 min-[90rem]:grid-cols-2">
+      <div class="filters-container flex flex-wrap items-start gap-4">
         
         <!-- FILTRO DE CATEGORÍA -->
-        <fieldset class="filter-group">
-          <legend class="block text-[0.85rem] font-semibold mb-4 uppercase tracking-[0.05em] text-[var(--color-ink)]">Categoría</legend>
-          <div class="filter-options space-y-2">
+        <details class="filter-dropdown relative">
+          <summary class="filter-trigger flex min-h-11 min-w-44 cursor-pointer items-center justify-between gap-6 border border-[rgb(12_18_12_/_26%)] bg-transparent px-4 py-2 font-[family-name:var(--font-accent)] text-[length:var(--type-control)] tracking-[0.06em] hover:border-[var(--color-accent)] focus-visible:outline-3 focus-visible:outline-[var(--color-accent)] focus-visible:outline-offset-4">
+            <span>Categoría</span><span class="filter-chevron text-[0.75rem]" aria-hidden="true">⌄</span>
+          </summary>
+          <fieldset class="filter-menu absolute left-0 top-[calc(100%+0.4rem)] z-10 m-0 max-h-[min(70vh,28rem)] min-w-full overflow-y-auto border border-[rgb(12_18_12_/_18%)] bg-[var(--color-paper)] p-2 shadow-lg">
+            <legend class="sr-only">Filtrar por categoría</legend>
+            <div class="filter-options grid gap-1">
             
             <!-- Todas las categorías -->
             <div class="filter-item">
               <input type="radio" id="cat-all" name="category" value="all" checked class="hidden peer/cat-all">
-              <label for="cat-all" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/cat-all:bg-[var(--color-ink)] peer-checked/cat-all:text-[var(--color-paper)] peer-checked/cat-all:border-[var(--color-ink)]">
+              <label for="cat-all" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/cat-all:bg-[var(--color-ink)] peer-checked/cat-all:text-[var(--color-paper)] peer-checked/cat-all:border-[var(--color-ink)]">
                 <span>Todas las categorías</span>
               </label>
             </div>
@@ -76,7 +76,7 @@
             <!-- Calzado -->
             <div class="filter-item">
               <input type="radio" id="cat-shoes" name="category" value="shoes" class="hidden peer/cat-shoes">
-              <label for="cat-shoes" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/cat-shoes:bg-[var(--color-ink)] peer-checked/cat-shoes:text-[var(--color-paper)] peer-checked/cat-shoes:border-[var(--color-ink)]">
+              <label for="cat-shoes" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/cat-shoes:bg-[var(--color-ink)] peer-checked/cat-shoes:text-[var(--color-paper)] peer-checked/cat-shoes:border-[var(--color-ink)]">
                 <span>Calzado</span>
               </label>
             </div>
@@ -84,7 +84,7 @@
             <!-- Camisas -->
             <div class="filter-item">
               <input type="radio" id="cat-shirts" name="category" value="shirts" class="hidden peer/cat-shirts">
-              <label for="cat-shirts" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/cat-shirts:bg-[var(--color-ink)] peer-checked/cat-shirts:text-[var(--color-paper)] peer-checked/cat-shirts:border-[var(--color-ink)]">
+              <label for="cat-shirts" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/cat-shirts:bg-[var(--color-ink)] peer-checked/cat-shirts:text-[var(--color-paper)] peer-checked/cat-shirts:border-[var(--color-ink)]">
                 <span>Camisas</span>
               </label>
             </div>
@@ -92,7 +92,7 @@
             <!-- Pantalones -->
             <div class="filter-item">
               <input type="radio" id="cat-pants" name="category" value="pants" class="hidden peer/cat-pants">
-              <label for="cat-pants" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/cat-pants:bg-[var(--color-ink)] peer-checked/cat-pants:text-[var(--color-paper)] peer-checked/cat-pants:border-[var(--color-ink)]">
+              <label for="cat-pants" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/cat-pants:bg-[var(--color-ink)] peer-checked/cat-pants:text-[var(--color-paper)] peer-checked/cat-pants:border-[var(--color-ink)]">
                 <span>Pantalones</span>
               </label>
             </div>
@@ -100,7 +100,7 @@
             <!-- Accesorios -->
             <div class="filter-item">
               <input type="radio" id="cat-accessories" name="category" value="accessories" class="hidden peer/cat-accessories">
-              <label for="cat-accessories" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/cat-accessories:bg-[var(--color-ink)] peer-checked/cat-accessories:text-[var(--color-paper)] peer-checked/cat-accessories:border-[var(--color-ink)]">
+              <label for="cat-accessories" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/cat-accessories:bg-[var(--color-ink)] peer-checked/cat-accessories:text-[var(--color-paper)] peer-checked/cat-accessories:border-[var(--color-ink)]">
                 <span>Accesorios</span>
               </label>
             </div>
@@ -108,7 +108,7 @@
             <!-- Chaquetas -->
             <div class="filter-item">
               <input type="radio" id="cat-jackets" name="category" value="jackets" class="hidden peer/cat-jackets">
-              <label for="cat-jackets" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/cat-jackets:bg-[var(--color-ink)] peer-checked/cat-jackets:text-[var(--color-paper)] peer-checked/cat-jackets:border-[var(--color-ink)]">
+              <label for="cat-jackets" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/cat-jackets:bg-[var(--color-ink)] peer-checked/cat-jackets:text-[var(--color-paper)] peer-checked/cat-jackets:border-[var(--color-ink)]">
                 <span>Chaquetas</span>
               </label>
             </div>
@@ -116,23 +116,28 @@
             <!-- Vestidos -->
             <div class="filter-item">
               <input type="radio" id="cat-dresses" name="category" value="dresses" class="hidden peer/cat-dresses">
-              <label for="cat-dresses" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/cat-dresses:bg-[var(--color-ink)] peer-checked/cat-dresses:text-[var(--color-paper)] peer-checked/cat-dresses:border-[var(--color-ink)]">
+              <label for="cat-dresses" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/cat-dresses:bg-[var(--color-ink)] peer-checked/cat-dresses:text-[var(--color-paper)] peer-checked/cat-dresses:border-[var(--color-ink)]">
                 <span>Vestidos</span>
               </label>
             </div>
             
-          </div>
-        </fieldset>
+            </div>
+          </fieldset>
+        </details>
         
         <!-- FILTRO DE TALLA -->
-        <fieldset class="filter-group">
-          <legend class="block text-[0.85rem] font-semibold mb-4 uppercase tracking-[0.05em] text-[var(--color-ink)]">Talla</legend>
-          <div class="filter-options space-y-2">
+        <details class="filter-dropdown relative">
+          <summary class="filter-trigger flex min-h-11 min-w-44 cursor-pointer items-center justify-between gap-6 border border-[rgb(12_18_12_/_26%)] bg-transparent px-4 py-2 font-[family-name:var(--font-accent)] text-[length:var(--type-control)] tracking-[0.06em] hover:border-[var(--color-accent)] focus-visible:outline-3 focus-visible:outline-[var(--color-accent)] focus-visible:outline-offset-4">
+            <span>Talla</span><span class="filter-chevron text-[0.75rem]" aria-hidden="true">⌄</span>
+          </summary>
+          <fieldset class="filter-menu absolute left-0 top-[calc(100%+0.4rem)] z-10 m-0 max-h-[min(70vh,28rem)] min-w-full overflow-y-auto border border-[rgb(12_18_12_/_18%)] bg-[var(--color-paper)] p-2 shadow-lg">
+            <legend class="sr-only">Filtrar por talla</legend>
+            <div class="filter-options grid gap-1">
             
             <!-- Todas las tallas -->
             <div class="filter-item">
               <input type="radio" id="size-all" name="size" value="all" checked class="hidden peer/size-all">
-              <label for="size-all" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/size-all:bg-[var(--color-ink)] peer-checked/size-all:text-[var(--color-paper)] peer-checked/size-all:border-[var(--color-ink)]">
+              <label for="size-all" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/size-all:bg-[var(--color-ink)] peer-checked/size-all:text-[var(--color-paper)] peer-checked/size-all:border-[var(--color-ink)]">
                 <span>Todas las tallas</span>
               </label>
             </div>
@@ -140,7 +145,7 @@
             <!-- XS -->
             <div class="filter-item">
               <input type="radio" id="size-xs" name="size" value="xs" class="hidden peer/size-xs">
-              <label for="size-xs" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/size-xs:bg-[var(--color-ink)] peer-checked/size-xs:text-[var(--color-paper)] peer-checked/size-xs:border-[var(--color-ink)]">
+              <label for="size-xs" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/size-xs:bg-[var(--color-ink)] peer-checked/size-xs:text-[var(--color-paper)] peer-checked/size-xs:border-[var(--color-ink)]">
                 <span>XS</span>
               </label>
             </div>
@@ -148,7 +153,7 @@
             <!-- S -->
             <div class="filter-item">
               <input type="radio" id="size-s" name="size" value="s" class="hidden peer/size-s">
-              <label for="size-s" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/size-s:bg-[var(--color-ink)] peer-checked/size-s:text-[var(--color-paper)] peer-checked/size-s:border-[var(--color-ink)]">
+              <label for="size-s" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/size-s:bg-[var(--color-ink)] peer-checked/size-s:text-[var(--color-paper)] peer-checked/size-s:border-[var(--color-ink)]">
                 <span>S</span>
               </label>
             </div>
@@ -156,7 +161,7 @@
             <!-- M -->
             <div class="filter-item">
               <input type="radio" id="size-m" name="size" value="m" class="hidden peer/size-m">
-              <label for="size-m" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/size-m:bg-[var(--color-ink)] peer-checked/size-m:text-[var(--color-paper)] peer-checked/size-m:border-[var(--color-ink)]">
+              <label for="size-m" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/size-m:bg-[var(--color-ink)] peer-checked/size-m:text-[var(--color-paper)] peer-checked/size-m:border-[var(--color-ink)]">
                 <span>M</span>
               </label>
             </div>
@@ -164,7 +169,7 @@
             <!-- L -->
             <div class="filter-item">
               <input type="radio" id="size-l" name="size" value="l" class="hidden peer/size-l">
-              <label for="size-l" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/size-l:bg-[var(--color-ink)] peer-checked/size-l:text-[var(--color-paper)] peer-checked/size-l:border-[var(--color-ink)]">
+              <label for="size-l" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/size-l:bg-[var(--color-ink)] peer-checked/size-l:text-[var(--color-paper)] peer-checked/size-l:border-[var(--color-ink)]">
                 <span>L</span>
               </label>
             </div>
@@ -172,7 +177,7 @@
             <!-- XL -->
             <div class="filter-item">
               <input type="radio" id="size-xl" name="size" value="xl" class="hidden peer/size-xl">
-              <label for="size-xl" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/size-xl:bg-[var(--color-ink)] peer-checked/size-xl:text-[var(--color-paper)] peer-checked/size-xl:border-[var(--color-ink)]">
+              <label for="size-xl" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/size-xl:bg-[var(--color-ink)] peer-checked/size-xl:text-[var(--color-paper)] peer-checked/size-xl:border-[var(--color-ink)]">
                 <span>XL</span>
               </label>
             </div>
@@ -180,13 +185,14 @@
             <!-- XXL -->
             <div class="filter-item">
               <input type="radio" id="size-xxl" name="size" value="xxl" class="hidden peer/size-xxl">
-              <label for="size-xxl" class="inline-flex items-center gap-2 px-4 py-2 border border-[#ddd] rounded-sm cursor-pointer transition-all text-[0.9rem] hover:border-[var(--color-accent)] peer-checked/size-xxl:bg-[var(--color-ink)] peer-checked/size-xxl:text-[var(--color-paper)] peer-checked/size-xxl:border-[var(--color-ink)]">
+              <label for="size-xxl" class="filter-option-label flex min-h-11 items-center gap-2 px-4 py-2 border border-transparent rounded-sm cursor-pointer transition-all text-[length:var(--type-control)] hover:border-[var(--color-accent)] peer-checked/size-xxl:bg-[var(--color-ink)] peer-checked/size-xxl:text-[var(--color-paper)] peer-checked/size-xxl:border-[var(--color-ink)]">
                 <span>XXL</span>
               </label>
             </div>
             
-          </div>
-        </fieldset>
+            </div>
+          </fieldset>
+        </details>
         
       </div>
     </section>
@@ -203,12 +209,12 @@
             <img src="../../IMG/CHAQUETA.jpg" alt="Chaqueta de piel negra con bordados en relieve y cierres metálicos plateados" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Chaqueta de piel bordada</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Chaqueta de piel bordada</a></h3>
             <p itemprop="category">Chaqueta</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="189.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">189€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">189€</p>
         </article>
 
         <!-- PRODUCTO 2: Chaqueta de líneas precisas -->
@@ -218,12 +224,12 @@
             <img src="../../IMG/JACKETjpeg.jpeg" alt="Chaqueta estructurada en tonos grises y claros con cuello alto minimalista" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Chaqueta de líneas precisas</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Chaqueta de líneas precisas</a></h3>
             <p itemprop="category">Chaqueta</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="175.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">175€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">175€</p>
         </article>
 
         <!-- PRODUCTO 3: Blazer minimalista gris -->
@@ -233,12 +239,12 @@
             <img src="../../IMG/CH.jpeg" alt="Blazer gris oscuro de corte clásico con acabado impecable y solapas elegantes" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Blazer minimalista gris</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Blazer minimalista gris</a></h3>
             <p itemprop="category">Chaqueta</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="165.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">165€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">165€</p>
         </article>
 
         <!-- PRODUCTO 4: Sudadera oversized negra -->
@@ -248,12 +254,12 @@
             <img src="../../IMG/SUDADERA.jpeg" alt="Sudadera oversized en algodón negro puro con mangas anchas y corte relajado" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Sudadera oversized negra</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Sudadera oversized negra</a></h3>
             <p itemprop="category">Sudadera</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="89.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">89€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">89€</p>
         </article>
 
         <!-- PRODUCTO 5: Hoodie con capucha negro -->
@@ -263,12 +269,12 @@
             <img src="../../IMG/hood.jpg" alt="Hoodie negro con capucha ajustable, bolsillos laterales y cordones de algodón" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Hoodie con capucha negro</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Hoodie con capucha negro</a></h3>
             <p itemprop="category">Sudadera</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="95.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">95€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">95€</p>
         </article>
 
         <!-- PRODUCTO 6: Suéter de cuello alto crema -->
@@ -278,12 +284,12 @@
             <img src="../../IMG/SWEATER.jpeg" alt="Suéter de cuello alto en lana merina crema con textura delicada y cómodo" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Suéter de cuello alto crema</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Suéter de cuello alto crema</a></h3>
             <p itemprop="category">Suéter</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="119.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">119€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">119€</p>
         </article>
 
         <!-- PRODUCTO 7: Sudadera deportiva gris -->
@@ -293,12 +299,12 @@
             <img src="../../IMG/WSDM.jpeg" alt="Sudadera deportiva gris claro con costuras reforzadas y cuello redondo" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Sudadera deportiva gris</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Sudadera deportiva gris</a></h3>
             <p itemprop="category">Sudadera</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="79.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">79€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">79€</p>
         </article>
 
         <!-- PRODUCTO 8: Camiseta blanca básica -->
@@ -308,12 +314,12 @@
             <img src="../../IMG/SHIRT.jpg" alt="Camiseta blanca básica de algodón 100% con cuello redondo y mangas cortas" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Camiseta blanca básica</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Camiseta blanca básica</a></h3>
             <p itemprop="category">Camiseta</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="35.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">35€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">35€</p>
         </article>
 
         <!-- PRODUCTO 9: Camiseta negra premium -->
@@ -323,12 +329,12 @@
             <img src="../../IMG/shirt.webp" alt="Camiseta negra premium de algodón orgánico con acabado suave" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Camiseta negra premium</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Camiseta negra premium</a></h3>
             <p itemprop="category">Camiseta</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="42.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">42€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">42€</p>
         </article>
 
         <!-- PRODUCTO 10: Top elegante negro -->
@@ -338,12 +344,12 @@
             <img src="../../IMG/TOP.jpeg" alt="Top elegante negro sin mangas con escote en V y tejido fluido" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Top elegante negro</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Top elegante negro</a></h3>
             <p itemprop="category">Top</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="58.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">58€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">58€</p>
         </article>
 
         <!-- PRODUCTO 11: Pantalón recto negro -->
@@ -353,12 +359,12 @@
             <img src="../../IMG/PT.webp" alt="Pantalón recto negro de corte clásico con cintura alta y largo tobillero" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Pantalón recto negro</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Pantalón recto negro</a></h3>
             <p itemprop="category">Pantalón</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="125.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">125€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">125€</p>
         </article>
 
         <!-- PRODUCTO 12: Abrigo puff elegante -->
@@ -368,12 +374,12 @@
             <img src="../../IMG/PUFF.webp" alt="Abrigo puff negro con relleno de plumón y capucha desmontable" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Abrigo puff elegante</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Abrigo puff elegante</a></h3>
             <p itemprop="category">Abrigo</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="249.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">249€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">249€</p>
         </article>
 
         <!-- PRODUCTO 13: Vestido de noche largo -->
@@ -383,12 +389,12 @@
             <img src="../../IMG/WHOLE.webp" alt="Vestido de noche largo negro con corte elegante y tejido de alta calidad" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Vestido de noche largo</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Vestido de noche largo</a></h3>
             <p itemprop="category">Vestido</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="185.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">185€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">185€</p>
         </article>
 
         <!-- PRODUCTO 14: Camiseta limpia minimalista -->
@@ -398,12 +404,12 @@
             <img src="../../IMG/CLEAN.webp" alt="Camiseta minimalista blanca con líneas limpias y acabado impecable" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Camiseta limpia minimalista</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Camiseta limpia minimalista</a></h3>
             <p itemprop="category">Camiseta</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="39.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">39€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">39€</p>
         </article>
 
         <!-- PRODUCTO 15: Gorro de punto gris -->
@@ -413,12 +419,12 @@
             <img src="../../IMG/GTH.webp" alt="Gorro de punto gris con tejido suave y acabado acogedor" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Gorro de punto gris</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Gorro de punto gris</a></h3>
             <p itemprop="category">Accesorio</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="32.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">32€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">32€</p>
         </article>
 
         <!-- PRODUCTO 16: Vestido midi rosa -->
@@ -428,12 +434,12 @@
             <img src="../../IMG/ROSE.jpg" alt="Vestido midi en tonos rosa claro con tela fluida y elegancia francesa" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Vestido midi rosa</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Vestido midi rosa</a></h3>
             <p itemprop="category">Vestido</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="155.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">155€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">155€</p>
         </article>
 
         <!-- PRODUCTO 17: Pantalón deportivo negro -->
@@ -443,12 +449,12 @@
             <img src="../../IMG/SWP.jpg" alt="Pantalón deportivo negro con cintura elástica y bolsillos laterales" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Pantalón deportivo negro</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Pantalón deportivo negro</a></h3>
             <p itemprop="category">Pantalón</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="85.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">85€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">85€</p>
         </article>
 
         <!-- PRODUCTO 18: Chaqueta de aviador clásica -->
@@ -458,12 +464,12 @@
             <img src="../../IMG/WING.jpg" alt="Chaqueta de aviador clásica en piel negra con cuello de borreguito" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Chaqueta de aviador clásica</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Chaqueta de aviador clásica</a></h3>
             <p itemprop="category">Chaqueta</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="225.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">225€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">225€</p>
         </article>
 
         <!-- PRODUCTO 19: Bolso de cuero marrón -->
@@ -473,12 +479,12 @@
             <img src="../../IMG/brown.jpeg" alt="Bolso de cuero marrón chocolate con asa de mano y compartimentos interiores" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Bolso de cuero marrón</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Bolso de cuero marrón</a></h3>
             <p itemprop="category">Bolso</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="195.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">195€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">195€</p>
         </article>
 
         <!-- PRODUCTO 20: Cinturón de cuero negro -->
@@ -488,12 +494,12 @@
             <img src="../../IMG/CHAQUETA.jpg" alt="Cinturón de cuero negro con hebilla plateada minimalista y acabado elegante" loading="lazy" itemprop="image">
           </a>
           <div class="product-caption">
-            <h3><a href="../003-Vista-producto/product.html" itemprop="name">Cinturón de cuero negro</a></h3>
+            <h3  class="text-[length:var(--type-h3)]"><a href="../003-Vista-producto/product.html" itemprop="name">Cinturón de cuero negro</a></h3>
             <p itemprop="category">Accesorio</p>
           </div>
           <span itemprop="priceCurrency" content="EUR" class="hidden"></span>
           <span itemprop="price" content="48.00" class="hidden"></span>
-          <p class="text-[0.85rem] font-semibold text-[var(--color-ink)] mt-2">48€</p>
+          <p class="text-[length:var(--type-small)] font-semibold text-[var(--color-ink)] mt-2">48€</p>
         </article>
 
       </div>
@@ -501,60 +507,66 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer mt-[clamp(5rem,10vw,8rem)] border-t border-[rgb(12_18_12_/_14%)] bg-[#f5f4fb] px-[var(--page-gutter)] py-[clamp(3rem,6vw,5rem)]">
-    <div class="mx-auto w-full max-w-[100rem]">
-      
-      <!-- Grid de secciones del footer -->
-      <div class="footer-grid grid grid-cols-[minmax(0,1fr)] gap-8 min-[42rem]:grid-cols-2 min-[72rem]:grid-cols-4 mb-8">
-        
-        <!-- Sección: Marca -->
-        <section class="footer-section">
-          <h3 class="m-0 mb-4 font-[family-name:var(--font-display)] text-[1.3rem] font-normal tracking-[0.025em]">NOIR ÉDITION</h3>
-          <p class="m-0 text-[0.9rem] text-[#454a47] leading-[1.6]">Estudio visual de moda urbana. Formas, texturas y siluetas con carácter.</p>
-        </section>
-
-        <!-- Sección: Categorías -->
-        <section class="footer-section">
-          <h4 class="m-0 mb-4 font-[family-name:var(--font-accent)] text-[0.75rem] font-bold tracking-[0.1em] uppercase text-[var(--color-ink)]">Categorías</h4>
-          <ul class="m-0 p-0 list-none space-y-2">
-            <li><a href="Catalogo.html" class="text-[0.9rem] text-[#454a47] no-underline hover:text-[var(--color-accent)] hover:underline">Chaquetas</a></li>
-            <li><a href="Catalogo.html" class="text-[0.9rem] text-[#454a47] no-underline hover:text-[var(--color-accent)] hover:underline">Sudaderas</a></li>
-            <li><a href="Catalogo.html" class="text-[0.9rem] text-[#454a47] no-underline hover:text-[var(--color-accent)] hover:underline">Camisetas</a></li>
-            <li><a href="Catalogo.html" class="text-[0.9rem] text-[#454a47] no-underline hover:text-[var(--color-accent)] hover:underline">Pantalones</a></li>
-          </ul>
-        </section>
-
-        <!-- Sección: Información -->
-        <section class="footer-section">
-          <h4 class="m-0 mb-4 font-[family-name:var(--font-accent)] text-[0.75rem] font-bold tracking-[0.1em] uppercase text-[var(--color-ink)]">Información</h4>
-          <ul class="m-0 p-0 list-none space-y-2">
-            <li><a href="#" class="text-[0.9rem] text-[#454a47] no-underline hover:text-[var(--color-accent)] hover:underline">Sobre nosotros</a></li>
-            <li><a href="#" class="text-[0.9rem] text-[#454a47] no-underline hover:text-[var(--color-accent)] hover:underline">Envíos</a></li>
-            <li><a href="#" class="text-[0.9rem] text-[#454a47] no-underline hover:text-[var(--color-accent)] hover:underline">Cambios y devoluciones</a></li>
-            <li><a href="#" class="text-[0.9rem] text-[#454a47] no-underline hover:text-[var(--color-accent)] hover:underline">Contacto</a></li>
-          </ul>
-        </section>
-
-        <!-- Sección: Legal -->
-        <section class="footer-section">
-          <h4 class="m-0 mb-4 font-[family-name:var(--font-accent)] text-[0.75rem] font-bold tracking-[0.1em] uppercase text-[var(--color-ink)]">Legal</h4>
-          <ul class="m-0 p-0 list-none space-y-2">
-            <li><a href="#" class="text-[0.9rem] text-[#454a47] no-underline hover:text-[var(--color-accent)] hover:underline">Política de privacidad</a></li>
-            <li><a href="#" class="text-[0.9rem] text-[#454a47] no-underline hover:text-[var(--color-accent)] hover:underline">Términos de servicio</a></li>
-            <li><a href="#" class="text-[0.9rem] text-[#454a47] no-underline hover:text-[var(--color-accent)] hover:underline">Aviso legal</a></li>
-            <li><a href="#" class="text-[0.9rem] text-[#454a47] no-underline hover:text-[var(--color-accent)] hover:underline">Cookies</a></li>
-          </ul>
-        </section>
-
-      </div>
-
-      <!-- Línea divisoria -->
-      <div class="border-t border-[rgb(12_18_12_/_14%)] pt-6">
-        <!-- Copyright -->
-        <p class="m-0 text-center text-[0.8rem] text-[#6d7275] tracking-[0.05em]">© 2026 NOIR ÉDITION. Todos los derechos reservados. Diseñado con precisión.</p>
-      </div>
-
+  <footer class="site-footer bg-[var(--color-ink)] text-[var(--color-paper)] px-[var(--page-gutter)] pt-[clamp(3rem,6vw,5rem)] pb-5 [&_a:focus-visible]:outline-[var(--color-paper)] [&_h2]:mt-0 [&_h2]:mb-4 [&_h2]:font-[family-name:var(--font-body)] [&_h2]:text-[length:var(--type-h2)] [&_h2]:font-bold [&_h2]:tracking-[0.14em] [&_h2]:leading-[1.4] [&_h2]:uppercase">
+    <div class="footer-main mx-auto grid w-full max-w-[100rem] grid-cols-1 gap-x-8 gap-y-10 pb-11 min-[42rem]:grid-cols-2 min-[42rem]:items-start min-[72rem]:grid-cols-[minmax(0,1.2fr)_minmax(8rem,0.75fr)_minmax(9rem,0.9fr)_minmax(14rem,1.35fr)] min-[72rem]:gap-x-[clamp(1.5rem,3vw,3rem)]">
+      <section class="footer-intro" aria-labelledby="footer-brand-title">
+        <a class="footer-brand inline-block w-fit font-[family-name:var(--font-display)] text-[clamp(2rem,5vw,2.8rem)] leading-none tracking-[0.025em] no-underline" id="footer-brand-title" href="../001-Home/Home.html">NOIR ÉDITION</a>
+        <p class="footer-statement mt-4 mb-[1.35rem] max-w-72 text-[length:var(--type-control)] text-[#e0e0df]">Una exploración de la forma urbana, el gesto y la materia.</p>
+        <nav class="footer-social flex flex-wrap gap-[0.65rem] [&_a]:inline-flex [&_a]:min-w-[2.7rem] [&_a]:min-h-[2.7rem] [&_a]:items-center [&_a]:justify-center [&_a]:border [&_a]:border-[#ecebf3]/55 [&_a]:rounded-full [&_a]:text-[length:var(--type-caption)] [&_a]:font-bold [&_a]:tracking-[0.03em] [&_a]:no-underline [&_a]:transition-colors [&_a]:duration-[160ms] [&_a]:ease-[ease] [&_a:hover]:bg-[var(--color-paper)] [&_a:hover]:text-[var(--color-ink)]" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/" aria-label="Instagram"><svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.7" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://www.pinterest.com/" aria-label="Pinterest"><svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12.4 3.5c-4.9 0-7.4 3.5-7.4 6.5 0 2.2.8 4.1 2.6 4.8.3.1.5 0 .6-.3l.2-.9c.1-.3 0-.4-.2-.7-.5-.6-.8-1.3-.8-2.4 0-3.1 2.3-5.9 6-5.9 3.3 0 5.1 2 5.1 4.7 0 3.5-1.6 6.5-4 6.5-1.3 0-2.3-1.1-2-2.5.4-1.7 1.1-3.6 1.1-4.8 0-1.1-.6-2-1.8-2-1.4 0-2.5 1.4-2.5 3.3 0 1.2.4 2 .4 2s-1.4 5.8-1.6 6.8c-.5 2-.1 4.5 0 4.8 0 .2.3.2.4.1.2-.3 1.7-2.1 2.2-4.1.1-.6.8-3 .8-3 .4.8 1.7 1.5 3 1.5 4 0 6.7-3.7 6.7-8.6C21.2 7 17.7 3.5 12.4 3.5Z" fill="currentColor" transform="translate(-1 -1) scale(.96)"/></svg></a>
+          <a href="https://www.tiktok.com/" aria-label="TikTok"><svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M14 3h3.2c.2 1.8 1.2 3.3 3.3 3.8v3.1a9.2 9.2 0 0 1-3.3-1.1v6.5a6.2 6.2 0 1 1-6.2-6.2c.4 0 .8 0 1.2.1v3.3a3 3 0 1 0 1.8 2.8V3Z" fill="currentColor"/></svg></a>
+        </nav>
+      </section>
+      <nav class="footer-nav flex flex-col flex-wrap items-start gap-[0.7rem] [&_h2]:mb-[0.2rem] [&_a]:w-fit [&_a]:font-[family-name:var(--font-accent)] [&_a]:text-[0.78rem] [&_a]:font-normal [&_a]:tracking-[0.025em] [&_a]:leading-normal [&_a]:no-underline [&_a:hover]:underline [&_a:hover]:decoration-2 [&_a:hover]:underline-offset-[0.25em]" aria-label="Explorar la tienda">
+        <h2  class="text-[length:var(--type-h2)]">Explorar</h2>
+        <a href="../001-Home/Home.html">Inicio</a>
+        <a href="Catalogo.html" aria-current="page">Catálogo</a>
+        <a href="../003-Vista-producto/Producto.html">Producto</a>
+        <a href="../004-Carrito/Carrito.html">Carrito</a>
+        <a href="../005-Checkout/Checkout.html">Checkout</a>
+      </nav>
+      <nav class="footer-nav footer-nav--legal flex flex-col flex-wrap items-start gap-[0.7rem] [&_h2]:mb-[0.2rem] [&_a]:w-fit [&_a]:font-[family-name:var(--font-accent)] [&_a]:text-[0.78rem] [&_a]:font-normal [&_a]:tracking-[0.025em] [&_a]:leading-normal [&_a]:no-underline [&_a:hover]:underline [&_a:hover]:decoration-2 [&_a:hover]:underline-offset-[0.25em]" aria-label="Información legal y ayuda">
+        <h2  class="text-[length:var(--type-h2)]">Información</h2>
+        <a href="../001-Home/Home.html#footer-legal">Aviso legal</a>
+        <a href="../001-Home/Home.html#footer-privacy">Política de privacidad</a>
+        <a href="../001-Home/Home.html#footer-cookies">Política de cookies</a>
+        <a href="../001-Home/Home.html#footer-contact">Contacto</a>
+      </nav>
+      <section class="footer-contact min-[42rem]:col-span-full min-[72rem]:col-auto" id="footer-contact" aria-labelledby="footer-contact-title">
+        <h2 id="footer-contact-title" class="text-[length:var(--type-h2)]">Estamos cerca</h2>
+        <address class="mb-5 grid gap-[0.55rem] text-[0.82rem] text-[#e0e0df] not-italic [&_a]:w-fit [&_a]:text-[var(--color-paper)] [&_a]:no-underline [&_a:hover]:underline [&_a:hover]:underline-offset-[0.25em]">
+          <span>12, rue des Silhouettes, 75003 París, Francia</span>
+          <a href="tel:+33100000000">+33 1 00 00 00 00</a>
+          <span>bonjour@noiredition.example</span>
+        </address>
+        <form class="footer-form grid gap-2 min-[42rem]:grid-cols-1 [&_label]:mt-[0.45rem] [&_label]:text-[#e0e0df] [&_label]:text-[0.72rem] min-[42rem]:[&_label]:self-end [&_input]:w-full [&_input]:min-h-11 [&_input]:px-3 [&_input]:py-[0.65rem] [&_input]:border [&_input]:border-[#aeb6b4] [&_input]:rounded-none [&_input]:bg-[#172019] [&_input:disabled]:cursor-not-allowed [&_input:disabled]:opacity-[0.82] [&_:focus-visible]:outline-3 [&_:focus-visible]:outline-offset-3 [&_:focus-visible]:outline-[var(--color-paper)]" action="#footer-contact" method="get">
+          <fieldset class="m-0 grid min-w-0 gap-2 border-0 p-0 min-[42rem]:grid-cols-2 min-[42rem]:items-end min-[72rem]:grid-cols-1" disabled>
+            <legend class="mb-[0.7rem] text-[0.72rem] font-bold min-[42rem]:col-span-full min-[72rem]:col-auto">Formulario de contacto</legend>
+            <label for="footer-name">Tu nombre</label>
+            <input id="footer-name" name="nombre" type="text" autocomplete="name">
+            <label for="footer-email">Tu correo electrónico</label>
+            <input id="footer-email" name="email" type="email" autocomplete="email">
+            <label for="footer-message">¿En qué podemos ayudarte?</label>
+            <textarea class="w-full min-h-20 resize-y rounded-none border border-[#aeb6b4] bg-[#172019] px-3 py-[0.65rem] disabled:cursor-not-allowed disabled:opacity-[0.82] min-[42rem]:col-span-full min-[72rem]:col-auto" id="footer-message" name="mensaje" rows="3"></textarea>
+            <button class="mt-2 min-h-11 w-fit border border-[#aeb6b4] bg-transparent px-4 py-[0.7rem] text-[0.72rem] font-bold tracking-[0.09em] uppercase disabled:cursor-not-allowed disabled:opacity-[0.82] min-[42rem]:col-span-full min-[72rem]:col-auto" type="submit">Enviar mensaje</button>
+          </fieldset>
+        </form>
+      </section>
+    </div>
+    <section class="footer-assurance mx-auto grid w-full max-w-[100rem] grid-cols-1 gap-5 border-y border-[#ecebf3]/28 py-6 min-[42rem]:grid-cols-2 min-[72rem]:grid-cols-3 min-[72rem]:gap-8 [&>div]:flex [&>div]:items-center [&>div]:gap-[0.85rem] [&_p]:m-0 [&_p]:grid [&_p]:gap-[0.15rem] [&_p]:text-[#e0e0df] [&_p]:text-[0.72rem] [&_p]:leading-[1.45] [&_strong]:text-[var(--color-paper)] [&_strong]:text-xs [&_.assurance-mark]:grid [&_.assurance-mark]:size-10 [&_.assurance-mark]:flex-[0_0_2.5rem] [&_.assurance-mark]:place-items-center [&_.assurance-mark]:rounded-full [&_.assurance-mark]:border [&_.assurance-mark]:border-[#ecebf3]/55 [&_.assurance-mark]:text-[1.1rem]" aria-label="Información de compra">
+      <div><span class="assurance-mark" aria-hidden="true">✳</span><p><strong>Atención personal</strong><span>Estamos aquí para ayudarte.</span></p></div>
+      <div><span class="assurance-mark" aria-hidden="true">◇</span><p><strong>Selección cuidada</strong><span>Diseño con atención al detalle.</span></p></div>
+      <div class="footer-payments pl-[3.35rem] min-[42rem]:pl-0"><p><strong>Formas de pago</strong><span>Tarjeta · Billetera digital</span></p></div>
+    </section>
+    <div class="footer-legal-details mx-auto mt-6 grid w-full max-w-[100rem] gap-[0.7rem] min-[42rem]:grid-cols-3 [&_details]:text-[#e0e0df] [&_details]:text-[0.72rem] [&_summary]:w-fit [&_summary]:cursor-pointer [&_summary]:text-[var(--color-paper)] [&_summary]:underline [&_summary]:underline-offset-[0.2em] [&_summary:focus-visible]:outline-3 [&_summary:focus-visible]:outline-offset-3 [&_summary:focus-visible]:outline-[var(--color-paper)] [&_p]:mt-[0.65rem] [&_p]:mb-0 [&_p]:max-w-[50rem] [&_p]:leading-[1.6]" aria-label="Información legal">
+      <details id="footer-legal"><summary>Aviso legal</summary><p>NOIR ÉDITION es una identidad de marca ficticia. La dirección, el teléfono y el correo indicados son datos ficticios de contacto.</p></details>
+      <details id="footer-privacy"><summary>Política de privacidad</summary><p>Este sitio estático no envía los datos introducidos en el formulario. No compartas información personal en esta página.</p></details>
+      <details id="footer-cookies"><summary>Política de cookies</summary><p>Esta página no incorpora herramientas de analítica ni publicidad de terceros. La configuración del navegador puede gestionar las cookies de forma independiente.</p></details>
+    </div>
+    <div class="footer-bottom mx-auto mt-6 flex w-full max-w-[100rem] flex-wrap justify-between gap-4 border-t border-[#ecebf3]/28 pt-4 text-[length:var(--type-caption)] tracking-[0.09em] text-[#e0e0df] uppercase [&_p]:m-0 [&_a]:text-[var(--color-paper)] [&_a]:no-underline [&_a:hover]:underline [&_a:hover]:underline-offset-[0.25em]">
+      <p>© NOIR ÉDITION</p>
+      <a href="../001-Home/Home.html">Volver al inicio <span aria-hidden="true">↑</span></a>
     </div>
   </footer>
 
